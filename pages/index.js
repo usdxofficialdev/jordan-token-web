@@ -48,7 +48,7 @@ export default function Home() {
             MetaWorld is building the next generation of decentralized finance.
           </p>
           <div className="flex gap-6 justify-center pt-10">
-            <button className="px-12 py-5 bg-purple-600 rounded-2xl font-bold">BUY USDX</button>
+            <button className="px-12 py-5 bg-purple-600 rounded-2xl font-bold hover:scale-105 transition-all">BUY USDX</button>
           </div>
         </main>
       </div>
