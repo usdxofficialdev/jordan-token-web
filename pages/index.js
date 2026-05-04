@@ -41,20 +41,25 @@ export default function Home() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-y border-white/5 py-12">
-          <div>
-            <div className="text-4xl font-bold mb-1">1B+</div>
-            <div className="text-gray-500 text-sm uppercase tracking-widest">Total Supply</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold mb-1">0%</div>
-            <div className="text-gray-500 text-sm uppercase tracking-widest">Buy/Sell Tax</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold mb-1 text-blue-400">BEP-20</div>
-            <div className="text-gray-500 text-sm uppercase tracking-widest">Network</div>
-          </div>
-        </div>
+        {/* Stats Section with Contract Address */}
+<div className="grid grid-cols-1 md:grid-cols-4 gap-8 border-y border-white/5 py-12">
+  <div className="text-center md:text-left">
+    <div className="text-4xl font-bold mb-1 text-white">1B+</div>
+    <div className="text-gray-500 text-sm uppercase tracking-widest">Total Supply</div>
+  </div>
+  <div className="text-center md:text-left">
+    <div className="text-4xl font-bold mb-1 text-white">0%</div>
+    <div className="text-gray-500 text-sm uppercase tracking-widest">Buy/Sell Tax</div>
+  </div>
+  <div className="text-center md:text-left">
+    <div className="text-4xl font-bold mb-1 text-blue-400 uppercase">BEP-20</div>
+    <div className="text-gray-500 text-sm uppercase tracking-widest">Network</div>
+  </div>
+  <div className="text-center md:text-left">
+    <div className="text-xl font-mono font-bold mb-1 text-white break-all">0x6222...bd2a</div>
+    <div className="text-gray-500 text-sm uppercase tracking-widest">Contract Address</div>
+  </div>
+</div>
       </main>
 
       <footer className="text-center py-10 text-gray-600 text-sm">
