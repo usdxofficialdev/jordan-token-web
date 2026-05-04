@@ -5,7 +5,7 @@ function App() {
   const [walletAddress, setWalletAddress] = useState("");
 
   const connectWallet = async () => {
-    if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
+    if (window.ethereum) {
       try {
         const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
         setWalletAddress(accounts[0]);
@@ -18,41 +18,25 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans overflow-x-hidden">
-      <nav className="flex justify-between items-center px-8 py-6 bg-black/40 backdrop-blur-xl border-b border-white/5">
-        <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-          METAWORLD
-        </div>
+    <div style={{ backgroundColor: '#050505', minHeight: '100vh', color: 'white', fontFamily: 'sans-serif' }}>
+      <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '20px 40px', borderBottom: '1px solid #222' }}>
+        <div style={{ fontSize: '24px', fontWeight: 'bold' }}>METAWORLD</div>
         <button 
           onClick={connectWallet} 
-          className="px-6 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-gray-200 transition-all"
+          style={{ padding: '10px 20px', borderRadius: '20px', cursor: 'pointer' }}
         >
-          {walletAddress ? `${walletAddress.substring(0, 6)}...${walletAddress.substring(38)}` : "Connect Wallet"}
+          {walletAddress ? `${walletAddress.substring(0, 6)}...` : "Connect Wallet"}
         </button>
       </nav>
-
-      <main className="max-w-7xl mx-auto px-8 pt-24 text-center">
-        <h1 className="text-7xl md:text-9xl font-black tracking-tighter">
-          THE FUTURE <br /> 
-          <span className="opacity-50">IS HERE.</span>
-        </h1>
-        <div className="mt-10">
-          <button className="px-12 py-5 bg-purple-600 rounded-2xl font-bold hover:bg-purple-700 transition-all shadow-lg shadow-purple-500/20">
-            BUY USDX
-          </button>
-        </div>
+      <main style={{ textAlign: 'center', marginTop: '100px' }}>
+        <h1 style={{ fontSize: '72px', fontWeight: '900' }}>THE FUTURE IS HERE.</h1>
+        <button style={{ padding: '15px 40px', backgroundColor: '#9333ea', color: 'white', borderRadius: '10px', fontWeight: 'bold', border: 'none', cursor: 'pointer' }}>
+          BUY USDX
+        </button>
       </main>
     </div>
   );
 }
 
-// Render logic for Vite
-const rootElement = document.getElementById('root');
-if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
