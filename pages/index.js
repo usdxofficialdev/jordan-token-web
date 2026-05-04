@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function Home() {
+  const copyAddress = () => {
+    navigator.clipboard.writeText("0x6222...bd2a"); // Yahan apna asli address daal dena
+    alert("Contract Address Copied!");
+  };
   return (
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-blue-500/30">
       {/* Navbar */}
@@ -52,9 +56,20 @@ export default function Home() {
     <div className="text-gray-500 text-sm uppercase tracking-widest">Buy/Sell Tax</div>
   </div>
   <div className="text-center md:text-left">
-    <div className="text-4xl font-bold mb-1 text-blue-400 uppercase">BEP-20</div>
-    <div className="text-gray-500 text-sm uppercase tracking-widest">Network</div>
+  <div className="flex items-center gap-2 mb-1 justify-center md:justify-start">
+    <div className="text-xl font-mono font-bold text-white truncate max-w-[150px]">0x6222...bd2a</div>
+    <button 
+      onClick={copyAddress}
+      className="p-1.5 bg-white/5 hover:bg-blue-500/20 border border-white/10 rounded-lg transition-all group"
+      title="Copy Address"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400 group-hover:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d=" <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+      </svg>
+    </button>
   </div>
+  <div className="text-gray-500 text-sm uppercase tracking-widest">Contract Address</div>
+</div>
   <div className="text-center md:text-left">
     <div className="text-xl font-mono font-bold mb-1 text-white break-all">0x6222...bd2a</div>
     <div className="text-gray-500 text-sm uppercase tracking-widest">Contract Address</div>
