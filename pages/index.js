@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { ethers } from 'ethers';
 export default function Home() {
   const [walletAddress, setWalletAddress] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
