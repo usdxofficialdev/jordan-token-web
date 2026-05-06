@@ -1,25 +1,21 @@
 {
   "name": "jordan-token-web",
-  "version": "0.1.6",
+  "version": "1.0.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "wagmi": "^2.9.0",
-    "viem": "^2.13.1",
-    "@web3modal/wagmi": "^4.2.3",
-    "@tanstack/react-query": "^5.40.0",
-    "lucide-react": "^0.378.0"
-  },
-  "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.4.1",
+    "postcss": "8.4.31",
+    "autoprefixer": "10.4.16",
+    "ethers": "^6.12.1",
+    "web3": "^4.8.0",
+    "@web3modal/ethers": "latest"
   }
 }
