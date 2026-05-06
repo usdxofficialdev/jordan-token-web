@@ -65,6 +65,24 @@ export default function Home() {
               <button className="bg-white text-black px-14 py-5 rounded-2xl font-black uppercase text-sm hover:scale-105 transition shadow-2xl tracking-widest">Join the Pack</button>
               
               {/* NAYA SWAP BUTTON (BEP20 Support) */}
+              {/* LIVE CHART SECTION */}
+<div className="mt-24 w-full max-w-6xl mx-auto px-4">
+  <div className="mb-8 flex items-center gap-4">
+    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-[#ff5c00]/30"></div>
+    <div className="border border-[#ff5c00]/30 rounded-full px-6 py-1 text-[#ff5c00] text-[10px] font-black tracking-[0.3em] uppercase bg-[#ff5c00]/5">
+      Live Market Chart
+    </div>
+    <div className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-[#ff5c00]/30"></div>
+  </div>
+  
+  <div className="w-full h-[600px] rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_50px_-12px_rgba(255,92,0,0.2)] bg-[#12141d] relative">
+    <iframe 
+      src="https://dexscreener.com/bsc/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c?embed=1&theme=dark&trades=0&info=0"
+      className="absolute inset-0 w-full h-full border-0"
+      title="Live Chart"
+    ></iframe>
+  </div>
+</div>
               <button 
                 onClick={() => open({ view: 'Swap' })}
                 className="bg-[#ff5c00] text-white px-14 py-5 rounded-2xl font-black uppercase text-sm hover:scale-105 transition shadow-[0_0_30px_rgba(255,92,0,0.4)] tracking-widest"
