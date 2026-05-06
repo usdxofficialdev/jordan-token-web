@@ -45,9 +45,9 @@ function App() {
         <button style={{ padding: '15px 40px', backgroundColor: '#9333ea', color: 'white', borderRadius: '10px', fontWeight: 'bold', border: 'none', cursor: 'pointer', fontSize: '18px' }}>
           BUY USDX
         </button>
-      </main>
-      </WagmiConfig>
-    </div>
+    </main>
+      </div>
+    </WagmiConfig>
   );
 }
 
