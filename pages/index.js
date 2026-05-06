@@ -1,23 +1,42 @@
 import React, { useState } from 'react';
-import { ethers } from 'ethers';
+import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
+
+// --- CONFIGURATION START ---
+const projectId = 'f523ce22bed6a9a2acc600cadd1473c5';
+
+const mainnet = {
+  chainId: 1,
+  name: 'Ethereum',
+  currency: 'ETH',
+  explorerUrl: 'https://etherscan.io',
+  rpcUrl: 'https://cloudflare-eth.com'
+};
+
+const metadata = {
+  name: 'Metaworld',
+  description: 'Metaworld Token Gateway',
+  url: 'https://jordan-token-web.vercel.app',
+  icons: ['https://avatars.githubusercontent.com/u/168449767?s=200&v=4']
+};
+
+createWeb3Modal({
+  ethersConfig: defaultConfig({ metadata }),
+  chains: [mainnet],
+  projectId,
+  themeVariables: {
+    '--w3m-accent': '#ff5c00', // Aapke orange theme se match karega
+    '--w3m-border-radius-master': '2px'
+  }
+});
+// --- CONFIGURATION END ---
+
 export default function Home() {
-  const [walletAddress, setWalletAddress] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const connectWallet = async () => {
-    if (typeof window !== "undefined" && window.ethereum) {
-      try {
-        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-        setWalletAddress(accounts[0]);
-        setIsModalOpen(false);
-      } catch (err) { console.error("Denied"); }
-    } else { alert("Please use Trust Wallet or MetaMask!"); }
-  };
-
+  // Purani state ki ab zarurat nahi kyunki modal library handle karega
+  
   return (
     <div className="min-h-screen text-white font-sans selection:bg-orange-500/30 overflow-x-hidden relative">
       
-      {/* --- BACKGROUND --- */}
+      {/* --- BACKGROUND (Wahi purana) --- */}
       <div className="fixed inset-0 z-0 bg-[#050505]" style={{
         background: `radial-gradient(circle at top, #3d1b00 0%, #050505 65%)`
       }}></div>
@@ -39,31 +58,10 @@ export default function Home() {
             <a href="#" className="hover:text-white transition">Governance</a>
             <a href="#" className="hover:text-white transition">Whitepaper</a>
           </div>
-          <button onClick={() => setIsModalOpen(true)} className="bg-[#ff5c00] hover:bg-[#e65200] text-white px-8 py-3 rounded-full text-xs font-black transition-all shadow-lg uppercase">
-            {walletAddress ? `${walletAddress.slice(0,6)}...${walletAddress.slice(-4)}` : "CONNECT WALLET"}
-          </button>
+          
+          {/* MAGIC BUTTON: Ye apne aap saare wallets handle karega */}
+          <w3m-button />
         </nav>
-
-        {/* --- WALLET MODAL --- */}
-        {isModalOpen && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4">
-            <div className="bg-[#12141d] border border-white/10 p-8 rounded-[35px] max-w-sm w-full relative shadow-2xl">
-              <button onClick={() => setIsModalOpen(false)} className="absolute top-6 right-6 text-gray-500 hover:text-white bg-white/5 w-9 h-9 rounded-full flex items-center justify-center">×</button>
-              <h3 className="text-xl font-bold mb-8 text-center uppercase tracking-tight text-white">Select your wallet</h3>
-              <div className="flex flex-col border border-white/10 rounded-3xl overflow-hidden bg-white/[0.02]">
-                <button onClick={connectWallet} className="flex items-center gap-4 p-5 hover:bg-white/5 transition border-b border-white/10 group text-left">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" className="h-7 w-7" alt="" />
-                  <span className="font-bold text-xs uppercase tracking-widest text-white">MetaMask</span>
-                </button>
-                <button onClick={connectWallet} className="flex items-center gap-4 p-5 hover:bg-white/5 transition border-b border-white/10 group text-left">
-                  <img src="https://trustwallet.com/assets/images/media/assets/trust_platform.svg" className="h-7 w-7" alt="" />
-                  <span className="font-bold text-xs uppercase tracking-widest text-white">Trust Wallet</span>
-                </button>
-                <button className="p-5 text-[10px] font-black uppercase text-gray-500 hover:text-[#ff5c00] transition tracking-[0.2em] bg-black/20 text-center">More Wallet Options</button>
-              </div>
-            </div>
-          </div>
-        )}
 
         <main className="max-w-7xl mx-auto px-6 pt-20">
           
@@ -75,11 +73,9 @@ export default function Home() {
             <button className="bg-white text-black px-14 py-5 rounded-2xl font-black uppercase text-sm hover:scale-105 transition shadow-2xl tracking-widest">Join the Pack</button>
           </div>
 
-          {/* --- UPDATED: SIDE-BY-SIDE SECTIONS (DEX + SOCIALS) --- */}
+          {/* DEX + SOCIALS Panel (Aapka Design) */}
           <div className="flex flex-col md:flex-row gap-6 mb-24 max-w-6xl mx-auto">
-            
-            {/* Market / DEX Panel */}
-            <div className="flex-1 bg-white/[0.03] border border-[#ff5c00]/30 rounded-[40px] p-8 backdrop-blur-xl relative group">
+            <div className="flex-1 bg-white/[0.03] border border-[#ff5c00]/30 rounded-[40px] p-8 backdrop-blur-xl relative">
                <div className="absolute -top-3 left-10 bg-[#050505] border border-[#ff5c00]/40 px-4 py-1 rounded-full">
                   <span className="text-[9px] font-black uppercase tracking-[0.2em] text-[#ff5c00]">Live Markets</span>
                </div>
@@ -98,7 +94,6 @@ export default function Home() {
                </div>
             </div>
 
-            {/* Social / Community Panel */}
             <div className="flex-1 bg-[#ff5c00]/5 border border-[#ff5c00]/30 rounded-[40px] p-8 backdrop-blur-xl relative">
                <div className="absolute -top-3 left-10 bg-[#050505] border border-[#ff5c00]/40 px-4 py-1 rounded-full">
                   <span className="text-[9px] font-black uppercase tracking-[0.2em] text-[#ff5c00]">Community</span>
@@ -116,10 +111,9 @@ export default function Home() {
                  ))}
                </div>
             </div>
-
           </div>
 
-          {/* Infinite Logo Slider */}
+          {/* Infinite Slider */}
           <div className="w-full overflow-hidden py-16 border-y border-white/5 relative bg-black/40 mb-20">
             <div className="animate-infinite-scroll flex gap-24 items-center">
                {['Binance', 'Coinbase', 'Kraken', 'DEXTools', 'DexScreener', 'PancakeSwap', 'CoinGecko', 'Solana', 'Jupiter'].map((name, i) => (
@@ -157,7 +151,7 @@ export default function Home() {
 
         <footer className="bg-black/60 pt-32 pb-16 border-t border-white/5 text-center">
           <h1 className="text-3xl font-black uppercase tracking-tighter mb-4">USDX</h1>
-          <p className="text-[11px] text-gray-500 uppercase tracking-widest font-black">© 2026 USDX. All rights reserved.</p>
+          <p className="text-[11px] text-gray-400 uppercase tracking-widest font-black">© 2026 USDX. All rights reserved.</p>
         </footer>
       </div>
     </div>
