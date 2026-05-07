@@ -88,12 +88,36 @@ export default function Home() {
                 className="bg-[#ff5c00] text-white px-14 py-5 rounded-2xl font-black uppercase text-sm hover:scale-105 transition shadow-[0_0_30px_rgba(255,92,0,0.4)] tracking-widest"
               >
                 Swap BEP20
-              </button>
-            </div>
-          </div>
+              </button>            
+         {/* --- TOKENOMICS SECTION START --- */}
+<div className="mt-28 w-full max-w-6xl mx-auto px-4 mb-20 relative z-10">
+  <div className="mb-12 flex items-center gap-4">
+    <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#ff5c00]/40"></div>
+    <div className="border border-[#ff5c00]/30 rounded-full px-8 py-2 text-[#ff5c00] text-[11px] font-black tracking-[0.4em] uppercase bg-[#ff5c00]/5 backdrop-blur-sm">
+      USDX Tokenomics
+    </div>
+    <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#ff5c00]/40"></div>
+  </div>
 
-          {/* Aapka baaki ka sara design as it is */}
-          <div className="flex flex-col md:flex-row gap-6 mb-24 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="bg-white/[0.03] border border-white/10 p-10 rounded-[35px] text-center hover:border-[#ff5c00]/50 transition-all group backdrop-blur-xl">
+      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 group-hover:text-orange-400 transition-colors">Total Supply</p>
+      <h3 className="text-4xl font-black text-white">1B <span className="text-[#ff5c00]">USDX</span></h3>
+    </div>
+
+    <div className="bg-white/[0.03] border border-white/10 p-10 rounded-[35px] text-center hover:border-[#ff5c00]/50 transition-all group backdrop-blur-xl">
+      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 group-hover:text-orange-400 transition-colors">Trading Fee</p>
+      <h3 className="text-4xl font-black text-white">0% <span className="text-[#ff5c00]">Tax</span></h3>
+    </div>
+
+    <div className="bg-white/[0.03] border border-white/10 p-10 rounded-[35px] text-center hover:border-[#ff5c00]/50 transition-all group backdrop-blur-xl">
+      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 group-hover:text-orange-400 transition-colors">Network</p>
+      <h3 className="text-4xl font-black text-white italic tracking-tighter">BEP-20</h3>
+    </div>
+  </div>
+  </div> {/* --- TOKENOMICS SECTION END --- */}
+
+    <div className="flex flex-col md:flex-row gap-8 mb-24 max-w-6xl mx-auto px-4 relative z-10">
             <div className="flex-1 bg-white/[0.03] border border-[#ff5c00]/30 rounded-[40px] p-8 backdrop-blur-xl relative">
                <div className="absolute -top-3 left-10 bg-[#050505] border border-[#ff5c00]/40 px-4 py-1 rounded-full">
                   <span className="text-[9px] font-black uppercase tracking-[0.2em] text-[#ff5c00]">Live Markets</span>
