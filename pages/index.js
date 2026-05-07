@@ -117,7 +117,8 @@ export default function Home() {
       </div>
     </div>
     {/* --- TOKENOMICS SECTION END --- */}
-  </div>
+
+
     <div className="flex flex-col md:flex-row gap-8 mb-24 max-w-6xl mx-auto px-4 relative z-10">
             <div className="flex-1 bg-white/[0.03] border border-[#ff5c00]/30 rounded-[40px] p-8 backdrop-blur-xl relative">
                <div className="absolute -top-3 left-10 bg-[#050505] border border-[#ff5c00]/40 px-4 py-1 rounded-full">
