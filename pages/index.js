@@ -1,4 +1,3 @@
-```jsx
 import React from 'react';
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
 
@@ -49,7 +48,6 @@ export default function Home() {
         }}
       />
 
-      {/* NAVBAR */}
       <nav className="relative z-10 flex justify-between items-center px-6 py-6 border-b border-white/10 backdrop-blur-md">
 
         <div className="flex items-center gap-4">
@@ -76,10 +74,8 @@ export default function Home() {
 
       <main className="relative z-10 max-w-7xl mx-auto px-6 pt-20">
 
-        {/* HERO */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-24">
 
-          {/* LEFT */}
           <div>
 
             <h2 className="text-5xl md:text-7xl font-black uppercase leading-none mb-8">
@@ -108,7 +104,6 @@ export default function Home() {
 
           </div>
 
-          {/* RIGHT */}
           <div className="bg-white/[0.03] border border-white/10 rounded-[35px] p-6 backdrop-blur-xl">
 
             <div className="flex justify-between items-center mb-6">
@@ -123,20 +118,18 @@ export default function Home() {
 
             </div>
 
-            {/* CHART */}
             <div className="h-[220px] rounded-3xl bg-black/40 border border-white/5 mb-6 flex items-end gap-2 p-4 overflow-hidden">
 
               {chartBars.map((h, i) => (
                 <div
                   key={i}
-                  style={{ height: h + 'px' }}
+                  style={{ height: `${h}px` }}
                   className="flex-1 bg-gradient-to-t from-[#ff5c00] to-orange-300 rounded-t-xl"
                 />
               ))}
 
             </div>
 
-            {/* SWAP */}
             <div className="space-y-4">
 
               <div className="bg-black/40 rounded-2xl p-4 border border-white/5">
@@ -191,7 +184,6 @@ export default function Home() {
 
         </section>
 
-        {/* CONTRACT */}
         <section className="mb-24">
 
           <div className="bg-white/[0.03] border border-white/10 rounded-[35px] p-8 backdrop-blur-xl">
@@ -228,7 +220,6 @@ export default function Home() {
 
         </section>
 
-        {/* STATS */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
 
           <div className="bg-white/[0.03] border border-white/10 rounded-[35px] p-10 text-center">
@@ -269,7 +260,6 @@ export default function Home() {
 
         </section>
 
-        {/* ABOUT */}
         <section className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-8">
 
           <div className="bg-white/[0.03] border border-white/10 rounded-[35px] p-8">
@@ -306,115 +296,8 @@ export default function Home() {
 
         </section>
 
-        {/* ROADMAP */}
-        <section className="mb-24">
-
-          <div className="flex items-center gap-4 mb-12">
-
-            <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#ff5c00]/40"></div>
-
-            <div className="px-8 py-2 border border-[#ff5c00]/30 rounded-full text-[#ff5c00] text-xs uppercase tracking-[0.4em] font-black">
-              Roadmap
-            </div>
-
-            <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#ff5c00]/40"></div>
-
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-            {[
-              {
-                phase: 'Phase 1',
-                title: 'Launch',
-                desc: 'Website and Token Deployment'
-              },
-              {
-                phase: 'Phase 2',
-                title: 'Community',
-                desc: 'Marketing and Community Growth'
-              },
-              {
-                phase: 'Phase 3',
-                title: 'Listing',
-                desc: 'CoinMarketCap and CoinGecko'
-              },
-              {
-                phase: 'Phase 4',
-                title: 'Expansion',
-                desc: 'Swap, DApp and Ecosystem Growth'
-              }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-white/[0.03] border border-white/10 rounded-[30px] p-6 hover:border-[#ff5c00]/40 transition-all"
-              >
-
-                <p className="text-[#ff5c00] text-xs uppercase tracking-widest font-black mb-2">
-                  {item.phase}
-                </p>
-
-                <h4 className="text-2xl font-black mb-3">
-                  {item.title}
-                </h4>
-
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-
-              </div>
-            ))}
-
-          </div>
-
-        </section>
-
-        {/* HOW TO BUY */}
-        <section className="max-w-6xl mx-auto mb-24">
-
-          <div className="text-center mb-14">
-
-            <h2 className="text-5xl font-black uppercase mb-4">
-              How To Buy USDX
-            </h2>
-
-            <p className="text-gray-400">
-              Buy USDX easily through decentralized exchanges.
-            </p>
-
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-            {[
-              'Install Trust Wallet or MetaMask',
-              'Add BNB Smart Chain',
-              'Get BNB in your wallet',
-              'Swap BNB to USDX'
-            ].map((step, index) => (
-              <div
-                key={index}
-                className="bg-white/[0.03] border border-white/10 rounded-[30px] p-6"
-              >
-
-                <div className="w-12 h-12 rounded-full bg-[#ff5c00] flex items-center justify-center font-black mb-6">
-                  {index + 1}
-                </div>
-
-                <p className="text-lg font-bold text-gray-200">
-                  {step}
-                </p>
-
-              </div>
-            ))}
-
-          </div>
-
-        </section>
-
       </main>
 
-      {/* FOOTER */}
       <footer className="border-t border-white/10 py-16 text-center relative z-10">
 
         <h1 className="text-4xl font-black uppercase tracking-tight mb-4">
