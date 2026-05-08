@@ -52,20 +52,25 @@ export default function Home() {
 
       <div className="relative z-10">
         <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto border-b border-white/5 backdrop-blur-md">
-       <h1 className="flex flex-col leading-none tracking-tighter uppercase relative group">
-  <div className="relative">
-    {/* USD (Bada aur Bold) */}
-    <span className="font-[1000] text-4xl md:text-5xl text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">USD</span>
-    
-    {/* Halka Glow Effect */}
-    <div className="absolute inset-0 bg-[#ff5c00]/10 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+      <div className="flex items-center gap-3 group cursor-pointer">
+  {/* Logo Circle Part */}
+  <div className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14">
+    {/* Outer Glowing Ring */}
+    <div className="absolute inset-0 border-2 border-[#ff5c00] rounded-full animate-[pulse_3s_infinite] opacity-50"></div>
+    {/* Inner Circle (The Coin) */}
+    <div className="absolute inset-1 bg-gradient-to-br from-[#ff5c00] to-[#b34100] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,92,0,0.4)]">
+      <span className="text-white font-[1000] text-lg md:text-xl tracking-tighter">USD</span>
+    </div>
   </div>
 
-  {/* EXCHANGE (Chota, Wide, aur Spaced) */}
-  <span className="font-medium text-[#ff5c00] text-[10px] md:text-[13px] tracking-[0.5em] mt-1 md:mt-2 opacity-90 italic">
-    Exchange
-  </span>
-</h1>
+  {/* Text Part */}
+  <div className="flex flex-col leading-none">
+    <span className="font-[1000] text-2xl md:text-3xl text-white tracking-tighter">USD</span>
+    <span className="font-medium text-[#ff5c00] text-[10px] md:text-[11px] tracking-[0.4em] uppercase opacity-90 italic">
+      Exchange
+    </span>
+  </div>
+</div>
           <w3m-button />
         </nav>
 <main className="max-w-7xl mx-auto px-6 pt-20">
