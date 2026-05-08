@@ -61,22 +61,7 @@ export default function Home() {
         }}
       ></div>
 
-      <style jsx>{`
-        @keyframes infinite-scroll {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-infinite-scroll {
-          display: flex;
-          width: max-content;
-          animation: infinite-scroll 35s linear infinite;
-        }
-      `}</style>
+      
 
       <div className="relative z-10">
         {/* Navbar */}
@@ -466,7 +451,7 @@ export default function Home() {
 
           {/* Ticker */}
           <div className="w-full overflow-hidden py-16 border-y border-white/5 relative bg-black/40 mb-20">
-            <div className="animate-infinite-scroll flex gap-24 items-center">
+            <div className="flex gap-24 items-center animate-pulse">
               {[
                 'Binance',
                 'Coinbase',
@@ -521,5 +506,3 @@ export default function Home() {
     </div>
   );
 }
-
-This keeps your Web3 wallet connection untouched and fixes the JSX structure issue.
