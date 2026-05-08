@@ -181,6 +181,7 @@ export default function Home() {
                ))}
             </div>
           </div>
+          </div>
         </main>
         
         <footer className="bg-black/60 pt-32 pb-16 border-t border-white/5 text-center">
