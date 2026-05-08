@@ -53,9 +53,11 @@ export default function Home() {
 
         <div className="flex items-center gap-4">
 
-          <div className="w-14 h-14 rounded-full bg-[#ff5c00] flex items-center justify-center text-white font-black text-lg shadow-[0_0_30px_rgba(255,92,0,0.5)]">
-            USDX
-          </div>
+         <img
+  src="/logo.png"
+  alt="USDExchange Logo"
+  className="w-16 h-16 object-contain drop-shadow-[0_0_20px_rgba(255,92,0,0.5)]"
+/>
 
           <div>
             <h1 className="text-3xl font-black tracking-tight uppercase">
