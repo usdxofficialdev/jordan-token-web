@@ -159,18 +159,28 @@ export default function Home() {
 
             </div>
 
-            {/* CHART */}
-            <div className="h-[220px] rounded-3xl bg-black/40 border border-white/5 mb-6 flex items-end gap-2 p-4 overflow-hidden">
-
-              {chartBars.map((h, i) => (
-                <div
-                  key={i}
-                  style={{ height: `${h}px` }}
-                  className="flex-1 bg-gradient-to-t from-[#ff5c00] to-orange-300 rounded-t-xl"
-                />
-              ))}
-
-            </div>
+           <div className="h-[320px] flex items-end gap-2 bg-black/50 rounded-2xl p-6 overflow-hidden">
+  {[
+    {h:90,c:'bg-green-500'},
+    {h:140,c:'bg-red-500'},
+    {h:120,c:'bg-green-500'},
+    {h:170,c:'bg-green-500'},
+    {h:110,c:'bg-red-500'},
+    {h:220,c:'bg-green-500'},
+    {h:160,c:'bg-red-500'},
+    {h:250,c:'bg-green-500'},
+    {h:180,c:'bg-red-500'},
+    {h:290,c:'bg-green-500'},
+    {h:210,c:'bg-red-500'},
+    {h:320,c:'bg-green-500'}
+  ].map((item,index)=>(
+    <div
+      key={index}
+      className={`flex-1 rounded-t-xl ${item.c}`}
+      style={{height:`${item.h}px`}}
+    />
+  ))}
+</div>
 
             {/* SWAP */}
             <div className="space-y-4">
