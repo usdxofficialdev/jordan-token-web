@@ -138,9 +138,10 @@ export default function Home() {
                 <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 group-hover:text-orange-400 transition-colors">Network</p>
                 <h3 className="text-4xl font-black text-white italic tracking-tighter">BEP-20</h3>
               </div>
-            </div>
-          </div>
-        </div> {/* YE DIBBA SAB KUCH BAND KAR RAHA HAI */}   
+           </div>
+      </div>
+    </div> {/* Tokenomics End */}
+  </div>   
 
     <div className="flex flex-col md:flex-row gap-8 mb-24 max-w-6xl mx-auto px-4 relative z-10">
             <div className="flex-1 bg-white/[0.03] border border-[#ff5c00]/30 rounded-[40px] p-8 backdrop-blur-xl relative">
