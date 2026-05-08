@@ -21,10 +21,10 @@ const bsc = {
 };
 
 const metadata = {
-  name: 'USD Exchange | USDX',
-  description: 'USD Exchange (USDX) - The Premier Digital Asset for the Metaworld Ecosystem',
-  url: 'https://metaworld-official.vercel.app',
-  icons: ['https://avatars.githubusercontent.com/u/168449767?s=200&v=4'] 
+  name: 'USDExchange | USDX',
+  description: 'USDExchange (USDX) - The Premier Digital Asset for the Global Ecosystem',
+  url: 'https://metaworld-official.vercel.app', // Isse bhi future mein domain se replace karein
+  icons: ['YOUR_NEW_LOGO_URL']
 };
 
 createWeb3Modal({
@@ -52,25 +52,21 @@ export default function Home() {
 
       <div className="relative z-10">
         <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto border-b border-white/5 backdrop-blur-md">
-      <div className="flex items-center gap-3 group cursor-pointer">
-  {/* Logo Circle Part */}
-  <div className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14">
-    {/* Outer Glowing Ring */}
-    <div className="absolute inset-0 border-2 border-[#ff5c00] rounded-full animate-[pulse_3s_infinite] opacity-50"></div>
-    {/* Inner Circle (The Coin) */}
-    <div className="absolute inset-1 bg-gradient-to-br from-[#ff5c00] to-[#b34100] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,92,0,0.4)]">
-      <span className="text-white font-[1000] text-lg md:text-xl tracking-tighter">USD</span>
-    </div>
-  </div>
+     <div className="flex items-center gap-3 group cursor-pointer">
+            {/* Logo Circle - Updated to USDX */}
+            <div className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14">
+              <div className="absolute inset-0 border-2 border-[#ff5c00] rounded-full animate-[pulse_3s_infinite] opacity-50"></div>
+              <div className="absolute inset-1 bg-gradient-to-br from-[#ff5c00] to-[#b34100] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,92,0,0.4)]">
+                <span className="text-white font-[1000] text-lg md:text-xl tracking-tighter">USDX</span>
+              </div>
+            </div>
 
-  {/* Text Part */}
-  <div className="flex flex-col leading-none">
-    <span className="font-[1000] text-2xl md:text-3xl text-white tracking-tighter">USD</span>
-    <span className="font-medium text-[#ff5c00] text-[10px] md:text-[11px] tracking-[0.4em] uppercase opacity-90 italic">
-      Exchange
-    </span>
-  </div>
-</div>
+            {/* Brand Text - Updated to USD EXCHANGE */}
+            <div className="flex flex-col leading-none">
+              <span className="font-[1000] text-2xl md:text-3xl text-white tracking-tighter uppercase italic">USD</span>
+              <span className="font-medium text-[#ff5c00] text-[10px] md:text-[11px] tracking-[0.4em] uppercase opacity-90">Exchange</span>
+            </div>
+          </div>
           <w3m-button />
         </nav>
 <main className="max-w-7xl mx-auto px-6 pt-20">
@@ -104,29 +100,42 @@ export default function Home() {
                 </button>
               </div>
               <p className="text-center mt-3 text-[9px] text-gray-500 font-medium uppercase tracking-[0.3em]">
-                Click to copy the official <span className="text-[#ff5c00]">USDX</span> contract
-              </p>
-            </div>
-            {/* 2. LIVE CHART SECTION */}
-            <div className="w-full max-w-6xl mx-auto px-4 mb-16">
-              <div className="mb-8 flex items-center gap-4">
-                <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-[#ff5c00]/30"></div>
-                <div className="border border-[#ff5c00]/30 rounded-full px-6 py-1 text-[#ff5c00] text-[10px] font-black tracking-[0.3em] uppercase bg-[#ff5c00]/5">
-                  Live Market Chart
-                </div>
-                <div className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-[#ff5c00]/30"></div>
-              </div>
-              <div className="w-full h-[600px] rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_50px_-12px_rgba(255,92,0,0.2)] bg-[#12141d] relative">
-                <iframe 
-                  src="https://dexscreener.com/bsc/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c?embed=1&theme=dark&trades=0&info=0" 
-                  className="absolute inset-0 w-full h-full border-0" 
-                  title="Live Chart"
-                ></iframe>
-              </div>
-            </div>
+             <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-[110px] font-black mb-10 tracking-tighter uppercase leading-[0.82]">
+              Your gateway to the <br />
+              <span className="text-[#ff5c00]">digital economy</span>
+            </h2>
 
-            {/* 3. SWAP BUTTON */}
-            <button onClick={() => open({ view: 'Swap' })} className="bg-[#ff5c00] text-white px-14 py-5 rounded-2xl font-black uppercase text-sm hover:scale-105 transition shadow-[0_0_30px_rgba(255,92,0,0.4)] tracking-widest mb-24">
+            <div className="flex flex-col items-center w-full">
+              <button className="bg-white text-black px-14 py-5 rounded-2xl font-black uppercase text-sm hover:scale-105 transition shadow-2xl tracking-widest mb-16">
+                Join the Community
+              </button>
+
+              {/* CONTRACT ADDRESS SECTION */}
+              <div className="w-full max-w-2xl mx-auto mb-16 px-4">
+                <div className="bg-white/[0.03] border border-white/10 p-1 rounded-2xl flex flex-col md:flex-row items-center gap-4 backdrop-blur-xl group hover:border-[#ff5c00]/30 transition-all">
+                  <div className="flex-1 flex items-center gap-3 px-6 py-3 overflow-hidden w-full">
+                    <span className="text-[#ff5c00] text-[10px] font-black uppercase tracking-widest whitespace-nowrap">CA:</span>
+                    <code className="text-[10px] md:text-xs font-mono text-gray-400 truncate tracking-wider">
+                      0x0000000000000000000000000000000000000000
+                    </code>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      navigator.clipboard.writeText('0x0000000000000000000000000000000000000000');
+                      alert('USDX Address Copied!');
+                    }}
+                    className="w-full md:w-auto bg-[#ff5c00] hover:bg-[#ff8c40] text-white px-8 py-4 rounded-xl font-black uppercase text-[10px] tracking-[0.2em] transition-all shadow-[0_0_20px_rgba(255,92,0,0.2)]"
+                  >
+                    Copy Address
+                  </button>
+                </div>
+                <p className="text-center mt-3 text-[9px] text-gray-500 font-medium uppercase tracking-[0.3em]">
+                  Click to copy the official <span className="text-[#ff5c00]">USDX</span> contract
+                </p>
+              </div>
+            </div>
+          </div>
               Swap BEP20
             </button>
           </div>
