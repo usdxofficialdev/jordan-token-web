@@ -100,42 +100,42 @@ export default function Home() {
                 </button>
               </div>
               <p className="text-center mt-3 text-[9px] text-gray-500 font-medium uppercase tracking-[0.3em]">
-      <div className="text-center mb-16">
+    <div className="text-center mb-16">
             <h2 className="text-5xl md:text-[110px] font-black mb-10 tracking-tighter uppercase leading-[0.82]">
               Your gateway to the <br />
               <span className="text-[#ff5c00]">digital economy</span>
             </h2>
 
-        <div className="flex flex-col items-center w-full">
-            <button className="bg-white text-black px-14 py-5 rounded-2xl font-black uppercase text-sm hover:scale-105 transition shadow-2xl tracking-widest mb-16">
-              Join the Community
-            </button>
+            <div className="flex flex-col items-center w-full">
+              <button className="bg-white text-black px-14 py-5 rounded-2xl font-black uppercase text-sm hover:scale-105 transition shadow-2xl tracking-widest mb-16">
+                Join the Community
+              </button>
 
-            {/* CONTRACT ADDRESS SECTION */}
-            <div className="w-full max-w-2xl mx-auto mb-16 px-4">
-              <div className="bg-white/[0.03] border border-white/10 p-1 rounded-2xl flex flex-col md:flex-row items-center gap-4 backdrop-blur-xl group hover:border-[#ff5c00]/30 transition-all">
-                <div className="flex-1 flex items-center gap-3 px-6 py-3 overflow-hidden w-full">
-                  <span className="text-[#ff5c00] text-[10px] font-black uppercase tracking-widest whitespace-nowrap">CA:</span>
-                  <code className="text-[10px] md:text-xs font-mono text-gray-400 truncate tracking-wider">
-                    0x0000000000000000000000000000000000000000
-                  </code>
+              {/* CONTRACT ADDRESS SECTION */}
+              <div className="w-full max-w-2xl mx-auto mb-16 px-4">
+                <div className="bg-white/[0.03] border border-white/10 p-1 rounded-2xl flex flex-col md:flex-row items-center gap-4 backdrop-blur-xl group hover:border-[#ff5c00]/30 transition-all">
+                  <div className="flex-1 flex items-center gap-3 px-6 py-3 overflow-hidden w-full">
+                    <span className="text-[#ff5c00] text-[10px] font-black uppercase tracking-widest whitespace-nowrap">CA:</span>
+                    <code className="text-[10px] md:text-xs font-mono text-gray-400 truncate tracking-wider">
+                      0x0000000000000000000000000000000000000000
+                    </code>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      navigator.clipboard.writeText('0x0000000000000000000000000000000000000000');
+                      alert('USDX Address Copied!');
+                    }}
+                    className="w-full md:w-auto bg-[#ff5c00] hover:bg-[#ff8c40] text-white px-8 py-4 rounded-xl font-black uppercase text-[10px] tracking-[0.2em] transition-all shadow-[0_0_20px_rgba(255,92,0,0.2)]"
+                  >
+                    Copy Address
+                  </button>
                 </div>
-                <button 
-                  onClick={() => {
-                    navigator.clipboard.writeText('0x0000000000000000000000000000000000000000');
-                    alert('USDX Address Copied!');
-                  }}
-                  className="w-full md:w-auto bg-[#ff5c00] hover:bg-[#ff8c40] text-white px-8 py-4 rounded-xl font-black uppercase text-[10px] tracking-[0.2em] transition-all shadow-[0_0_20px_rgba(255,92,0,0.2)]"
-                >
-                  Copy Address
-                </button>
+                <p className="text-center mt-3 text-[9px] text-gray-500 font-medium uppercase tracking-[0.3em]">
+                  Click to copy the official <span className="text-[#ff5c00]">USDX</span> contract
+                </p>
               </div>
-              <p className="text-center mt-3 text-[9px] text-gray-500 font-medium uppercase tracking-[0.3em]">
-                Click to copy the official <span className="text-[#ff5c00]">USDX</span> contract
-              </p>
             </div>
           </div>
-        </div>  
         {/* 4. TOKENOMICS SECTION */}
         <div className="w-full max-w-6xl mx-auto px-4 mb-28 relative z-10">
           <div className="mb-12 flex items-center gap-4">
