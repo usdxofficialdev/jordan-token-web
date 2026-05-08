@@ -39,15 +39,20 @@
       </div>
 
       {/* CHART */}
-      <div className="h-[220px] rounded-3xl bg-black/40 border border-white/5 mb-6 flex items-end gap-2 p-4 overflow-hidden">
-        {[40,70,55,90,60,120,85,140,100,170,130,190].map((h,i)=>(
-          <div
-            key={i}
-            style={{height:`${h}px`}}
-            className="flex-1 bg-gradient-to-t from-[#ff5c00] to-orange-300 rounded-t-xl"
-          />
-        ))}
-      </div>
+    ```jsx id="pdr6tf"
+<div className="h-[220px] rounded-3xl bg-black/40 border border-white/5 mb-6 flex items-end gap-2 p-4 overflow-hidden">
+
+  {[40,70,55,90,60,120,85,140,100,170,130,190].map((h,i)=>(
+    <div
+      key={i}
+      style={{ height: h + 'px' }}
+      className="flex-1 bg-gradient-to-t from-[#ff5c00] to-orange-300 rounded-t-xl"
+    />
+  ))}
+
+</div>
+```
+
 
       {/* SWAP */}
       <div className="space-y-4">
