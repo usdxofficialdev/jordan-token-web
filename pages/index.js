@@ -178,7 +178,31 @@ export default function Home() {
                </div>
             </div>
           </div>
+          {/* Roadmap Section */}
+<div className="max-w-6xl mx-auto px-4 mb-24 relative z-10">
+  <div className="flex items-center gap-4 mb-12">
+    <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#ff5c00]/40"></div>
+    <div className="border border-[#ff5c00]/30 rounded-full px-8 py-2 text-[#ff5c00] text-[11px] font-black tracking-[0.4em] uppercase bg-[#ff5c00]/5 backdrop-blur-sm">
+      USDX Roadmap
+    </div>
+    <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#ff5c00]/40"></div>
+  </div>
 
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+    {[
+      { phase: 'Phase 1', title: 'Launch', desc: 'Website & Token Deployment' },
+      { phase: 'Phase 2', title: 'Marketing', desc: 'Community Growth & Ads' },
+      { phase: 'Phase 3', title: 'Listing', desc: 'CMC & CoinGecko' },
+      { phase: 'Phase 4', title: 'Moon', desc: 'Tier 1 CEX Listings' }
+    ].map((item, index) => (
+      <div key={index} className="p-6 bg-white/[0.02] border border-white/10 rounded-[30px] hover:border-[#ff5c00]/40 transition-all">
+        <span className="text-[#ff5c00] text-[10px] font-black tracking-widest uppercase">{item.phase}</span>
+        <h4 className="text-xl font-bold text-white mt-2 mb-2">{item.title}</h4>
+        <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
+      </div>
+    ))}
+  </div>
+</div>
           <div className="w-full overflow-hidden py-16 border-y border-white/5 relative bg-black/40 mb-20">
             <div className="animate-infinite-scroll flex gap-24 items-center">
                {['Binance', 'Coinbase', 'Kraken', 'DEXTools', 'DexScreener', 'PancakeSwap', 'CoinGecko', 'Solana', 'Jupiter'].map((name, i) => (
