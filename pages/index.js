@@ -175,7 +175,7 @@ export default function Home() {
           {/* SWAP */}
 <div className="bg-black/40 rounded-2xl p-5 border border-white/5">
 
-  <div className="flex items-center justify-between gap-4">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
 
     <div className="flex-1 bg-black/50 rounded-2xl p-4 border border-white/10">
 
