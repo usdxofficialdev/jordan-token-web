@@ -258,13 +258,23 @@ React.useEffect(() => {
   </div>
 
 <div className="mt-6">
-  <button
-    id="custom-connect"
-    className="w-full h-[70px] rounded-[20px] bg-[#ff5c00] text-black font-black text-[24px]"
-  >
-    CONNECT WALLET
-  </button>
+<w3m-button label="CONNECT WALLET" />
+            <style jsx global>{`
+  w3m-button {
+    width: 100%;
+  }
 
+  w3m-button::part(button) {
+    width: 100% !important;
+    height: 70px !important;
+    border-radius: 20px !important;
+    background: #ff5c00 !important;
+    color: black !important;
+    font-weight: 900 !important;
+    font-size: 24px !important;
+    border: none !important;
+  }
+`}</style>
   <w3m-button style={{ display: 'none' }} />
 </div>
 
