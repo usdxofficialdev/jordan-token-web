@@ -245,28 +245,15 @@ export default function Home() {
 
   </div>
 
-<div className="mt-6 w-full">
+<div className="mt-6">
+  <button
+    id="custom-connect"
+    className="w-full h-[70px] rounded-[20px] bg-[#ff5c00] text-black font-black text-[24px]"
+  >
+    CONNECT WALLET
+  </button>
 
-  <w3m-button></w3m-button>
-
-  <style jsx>{`
-    w3m-button {
-      display: block;
-      width: 100%;
-    }
-
-    w3m-button::part(button) {
-      width: 100%;
-      height: 70px;
-      border-radius: 20px;
-      background: #ff5c00 !important;
-      color: black !important;
-      font-weight: 900;
-      font-size: 24px;
-      border: none;
-    }
-  `}</style>
-
+  <w3m-button style={{ display: 'none' }} />
 </div>
 
 </div>
