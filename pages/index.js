@@ -172,78 +172,80 @@ export default function Home() {
 
 </div>
 
-            {/* SWAP */}
-            <div className="space-y-4">
+          {/* SWAP */}
+<div className="bg-black/40 rounded-2xl p-5 border border-white/5">
 
-              <div className="bg-black/40 rounded-2xl p-4 border border-white/5">
+  <div className="flex items-center justify-between gap-4">
 
-                <div className="flex justify-between mb-2">
-                  <p className="text-xs text-gray-500 uppercase">
-                    From
-                  </p>
+    <div className="flex-1 bg-black/50 rounded-2xl p-4 border border-white/10">
 
-                  <p className="text-xs text-gray-500">
-                    Balance: 0.00
-                  </p>
-                </div>
+      <p className="text-xs text-gray-500 uppercase mb-3">
+        From
+      </p>
 
-                <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center">
 
-                  <input
-                    placeholder="0.0"
-                    className="bg-transparent outline-none text-2xl font-black w-full"
-                  />
+        <input
+          placeholder="0.0"
+          className="bg-transparent outline-none text-2xl font-black w-full"
+        />
 
-                  <button className="bg-[#ff5c00] px-4 py-2 rounded-xl font-black">
-                    BNB
-                  </button>
+        <button className="bg-[#ff5c00] px-4 py-2 rounded-xl font-black">
+          BNB
+        </button>
 
-                </div>
+      </div>
 
-              </div>
+      <p className="text-right text-xs text-gray-500 mt-3">
+        Balance: 0.00
+      </p>
 
-              <div className="bg-black/40 rounded-2xl p-4 border border-white/5">
+    </div>
 
-                <div className="flex justify-between mb-2">
-                  <p className="text-xs text-gray-500 uppercase">
-                    To
-                  </p>
+    <div className="text-[#ff5c00] text-3xl font-black">
+      ⇄
+    </div>
 
-                  <p className="text-xs text-gray-500">
-                    Balance: 0.00
-                  </p>
-                </div>
+    <div className="flex-1 bg-black/50 rounded-2xl p-4 border border-white/10">
 
-                <div className="flex justify-between items-center">
+      <p className="text-xs text-gray-500 uppercase mb-3">
+        To
+      </p>
 
-                  <input
-                    placeholder="0.0"
-                    className="bg-transparent outline-none text-2xl font-black w-full"
-                  />
+      <div className="flex justify-between items-center">
 
-                  <button className="bg-[#ff5c00] px-4 py-2 rounded-xl font-black">
-                    USDX
-                  </button>
+        <input
+          placeholder="0.0"
+          className="bg-transparent outline-none text-2xl font-black w-full"
+        />
 
-                </div>
+        <button className="bg-[#ff5c00] px-4 py-2 rounded-xl font-black">
+          USDX
+        </button>
 
-              </div>
+      </div>
 
-              <div className="flex justify-between text-sm text-gray-500 px-1">
+      <p className="text-right text-xs text-gray-500 mt-3">
+        Balance: 0.00
+      </p>
 
-                <span>Slippage: 0.5%</span>
-                <span>Gas Fee: ~$0.12</span>
+    </div>
 
-              </div>
+  </div>
 
-              <button className="w-full py-5 rounded-2xl bg-[#ff5c00] text-black font-black uppercase hover:scale-[1.02] transition-all">
-                Swap Tokens
-              </button>
+  <div className="flex justify-between text-sm text-gray-500 px-1 mt-5">
 
-            </div>
+    <span>Slippage: 0.5%</span>
 
-          </div>
+    <span>Gas Fee: ~$0.12</span>
 
+  </div>
+
+  <button className="w-full py-5 rounded-2xl bg-[#ff5c00] text-black font-black uppercase mt-6 hover:scale-[1.02] transition-all">
+    Connect Wallet
+  </button>
+
+</div>
         </section>
 
         {/* STATS */}
