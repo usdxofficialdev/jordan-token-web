@@ -241,9 +241,9 @@ export default function Home() {
 
   </div>
 
- <w3m-button /> rounded-2xl bg-[#ff5c00] text-black font-black uppercase mt-6 hover:scale-[1.02] transition-all">
-    Connect Wallet
-  </button>
+ <div className="mt-6">
+  <w3m-button />
+</div>
 
 </div>
             
