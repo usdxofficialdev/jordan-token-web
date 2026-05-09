@@ -40,28 +40,7 @@ createWeb3Modal({
 export default function Home() {
 
   const chartBars = [40, 70, 55, 90, 60, 120, 85, 140, 100, 170, 130, 190];
-React.useEffect(() => {
 
-  const btn = document.getElementById('custom-connect')
-
-  if (btn) {
-
-    btn.onclick = () => {
-
-      const modal = document.querySelector('w3m-modal')
-
-      if (modal) {
-        modal.open()
-      } else {
-        const btn = document.querySelector('w3m-button')
-        btn?.click()
-      }
-
-    }
-
-  }
-
-}, [])
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
 
@@ -268,18 +247,9 @@ React.useEffect(() => {
 
 <div className="mt-6">
 <div
-  onClick={() => {
-    const btn = document.querySelector('w3m-button')
-    btn?.click()
-  }}
-  className="w-full h-[70px] rounded-[20px] bg-[#ff5c00]
-  text-black font-black text-[24px]
-  flex items-center justify-center cursor-pointer"
->
-  CONNECT WALLET
+ <div className="mt-6">
+  <w3m-button />
 </div>
-
-<w3m-button style={{ display: 'none' }} />
 </div>
 
 </div>
