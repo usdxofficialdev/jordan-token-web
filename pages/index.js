@@ -246,7 +246,7 @@ export default function Home() {
   </div>
 
 <div className="mt-6">
-<div
+
  <div className="mt-6">
   <w3m-button />
 </div>
