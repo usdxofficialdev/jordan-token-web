@@ -241,7 +241,7 @@ export default function Home() {
 
   </div>
 
-  <button className="w-full py-5 rounded-2xl bg-[#ff5c00] text-black font-black uppercase mt-6 hover:scale-[1.02] transition-all">
+ <w3m-button /> rounded-2xl bg-[#ff5c00] text-black font-black uppercase mt-6 hover:scale-[1.02] transition-all">
     Connect Wallet
   </button>
 
