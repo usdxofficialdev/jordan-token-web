@@ -254,6 +254,9 @@ export default function Home() {
     CONNECT WALLET
   </button>
 </div>
+
+      </div>
+      
         </section>
 
         {/* STATS */}
