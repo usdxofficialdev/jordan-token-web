@@ -159,31 +159,19 @@ export default function Home() {
 
             </div>
 
-      <div className="h-[320px] bg-black/50 rounded-2xl p-6 overflow-hidden flex items-end gap-4">
-  {[
-    {h:120,color:'bg-green-500'},
-    {h:180,color:'bg-red-500'},
-    {h:140,color:'bg-green-500'},
-    {h:230,color:'bg-green-500'},
-    {h:160,color:'bg-red-500'},
-    {h:260,color:'bg-green-500'},
-    {h:190,color:'bg-red-500'},
-    {h:300,color:'bg-green-500'}
-  ].map((candle,index)=>(
-    <div key={index} className="flex flex-col items-center flex-1">
-      
-      <div className="w-[2px] bg-white/30 h-10"></div>
+    <div className="h-[420px] rounded-2xl overflow-hidden border border-white/10 bg-black/40">
 
-      <div
-        className={`w-8 rounded-md ${candle.color}`}
-        style={{height:`${candle.h}px`}}
-      ></div>
+  <iframe
+    src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_chart&symbol=BINANCE:BTCUSDT&interval=15&hidesidetoolbar=1&theme=dark&style=1&timezone=Etc/UTC&withdateranges=1&hideideas=1"
+    width="100%"
+    height="100%"
+    frameBorder="0"
+    allowTransparency="true"
+    scrolling="no"
+  ></iframe>
 
-      <div className="w-[2px] bg-white/30 h-10"></div>
-
-    </div>
-  ))}
 </div>
+
             {/* SWAP */}
             <div className="space-y-4">
 
