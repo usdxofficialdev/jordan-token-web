@@ -247,12 +247,32 @@ export default function Home() {
 
 <div className="mt-6">
 
- <button
-  onClick={() => open()}
-  className="w-full h-[70px] rounded-[20px] bg-[#ff5c00] text-black font-black text-xl hover:opacity-90 transition-all"
->
-  CONNECT WALLET
-</button>
+<div className="relative w-full">
+
+  <w3m-button />
+
+  <button
+    className="absolute inset-0 w-full h-[70px] rounded-[20px]
+    bg-[#ff5c00] text-black font-black text-xl z-10"
+  >
+    CONNECT WALLET
+  </button>
+
+</div>
+
+<style jsx>{`
+  w3m-button {
+    width: 100%;
+    opacity: 0;
+    position: relative;
+    z-index: 20;
+  }
+
+  w3m-button::part(button) {
+    width: 100%;
+    height: 70px;
+  }
+`}</style>
 </div>
 
 </div>
