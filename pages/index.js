@@ -248,7 +248,6 @@ export default function Home() {
 <div className="mt-6">
 
  <div className="mt-6">
- <w3m-button balance="hide" />
 
 <style jsx global>{`
   w3m-button {
