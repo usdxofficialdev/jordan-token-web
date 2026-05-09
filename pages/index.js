@@ -202,9 +202,9 @@ export default function Home() {
 
     </div>
 
-    <div className="text-[#ff5c00] text-3xl font-black">
-      ⇄
-    </div>
+    <div className="text-[#ff5c00] text-3xl font-black rotate-90 md:rotate-0">
+  ⇄
+</div>
 
     <div className="flex-1 bg-black/50 rounded-2xl p-4 border border-white/10">
 
