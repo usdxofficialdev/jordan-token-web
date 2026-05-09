@@ -1,8 +1,6 @@
 import React from 'react';
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
-
-      method: 'eth_requestAccounts'
-    })
+import { ethers } from 'ethers';
 
     const account = accounts[0]
 
