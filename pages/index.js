@@ -1,10 +1,6 @@
 import React from 'react';
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
-import { ethers } from 'ethers';
-const openWallet = async () => {
-  try {
 
-    const accounts = await window.ethereum.request({
       method: 'eth_requestAccounts'
     })
 
