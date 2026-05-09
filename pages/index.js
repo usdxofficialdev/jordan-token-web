@@ -1,6 +1,10 @@
 import React from 'react';
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
-
+const openWallet = async () => {
+  await window.ethereum?.request({
+    method: 'eth_requestAccounts'
+  })
+}
 const projectId = 'f523ce22bed6a9a2acc600cadd1473c5';
 
 const mainnet = {
