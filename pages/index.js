@@ -108,7 +108,7 @@ export default function Home() {
               </span>
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-black uppercase leading-none mb-8">
+            <h2 className="text-3xl md:text-5xl md:text-7xl font-black uppercase leading-none mb-8">
               Advanced
               <br />
               <span className="text-[#ff5c00]">
