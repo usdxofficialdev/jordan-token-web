@@ -40,7 +40,19 @@ createWeb3Modal({
 export default function Home() {
 
   const chartBars = [40, 70, 55, 90, 60, 120, 85, 140, 100, 170, 130, 190];
+React.useEffect(() => {
+  const btn = document.getElementById('custom-connect')
 
+  if (btn) {
+    btn.onclick = () => {
+      const realBtn = document.querySelector('w3m-button')
+      const shadowBtn =
+        realBtn?.shadowRoot?.querySelector('button')
+
+      shadowBtn?.click()
+    }
+  }
+}, [])
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
 
