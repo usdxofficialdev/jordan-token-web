@@ -132,8 +132,7 @@ const switchTokens = () => {
       />
 
       {/* NAVBAR */}
-      <nav className="relative z-10 flex justify-between items-center px-6 py-6 border-b border-white/10 backdrop-blur-md">
-
+    <nav className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 px-3 md:px-6 py-4 md:py-6 border-b border-white/10 backdrop-blur-md">
         <div className="flex items-center gap-4">
 
          <img
@@ -196,7 +195,7 @@ const switchTokens = () => {
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-3xl md:text-7xl font-black uppercase leading-none mb-8">
+            <h2 className="text-[42px] md:text-7xl font-black uppercase leading-[0.9] mb-4">
               Advanced
               <br />
               <span className="text-[#ff5c00]">
@@ -204,12 +203,11 @@ const switchTokens = () => {
               </span>
             </h2>
 
-            <p className="max-w-xl text-gray-400 text-lg leading-relaxed mb-8">
+           <p className="max-w-xl text-gray-400 text-[15px] leading-8 mb-5">
               Trade, swap and explore the future of decentralized finance inside the USDExchange ecosystem.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-
+<div className="flex flex-col md:flex-row gap-3">
               <a
                 href="https://pancakeswap.finance/"
                 target="_blank"
