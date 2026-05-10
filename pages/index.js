@@ -227,7 +227,7 @@ const executeSwap = async () => {
 
             </div>
 
-   <div className="h-[220px] md:h-[420px] rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+   <div className="h-[260px] md:h-[360px] rounded-[24px] overflow-hidden border border-white/10 bg-black/40">
 
   <iframe
     src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_chart&symbol=BINANCE:BTCUSDT&interval=15&hidesidetoolbar=1&theme=dark&style=1&timezone=Etc/UTC&withdateranges=1&hideideas=1"
@@ -239,7 +239,15 @@ const executeSwap = async () => {
   ></iframe>
 
 </div>
+<div className="flex justify-center gap-2 py-4">
 
+  <div className="w-10 h-[4px] rounded-full bg-[#ff5c00]"></div>
+
+  <div className="w-4 h-[4px] rounded-full bg-white/20"></div>
+
+  <div className="w-4 h-[4px] rounded-full bg-white/20"></div>
+
+</div>
   {/* ADVANCED BSC SWAP */}
 <div className="mt-6 bg-[#0b0b0b] border border-white/10 rounded-[20px] p-3 md:p-5 backdrop-blur-2xl shadow-2xl">
 
