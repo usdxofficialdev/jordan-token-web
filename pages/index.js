@@ -636,7 +636,70 @@ export default function Home() {
 
           {/* FEATURE CARDS */}
           <section className="grid grid-cols-5 gap-5 mt-8">
+{/* TOKENOMICS */}
+<section className="mb-24">
 
+  <div className="text-center mb-14">
+
+    <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
+      Tokenomics
+    </h2>
+
+    <p className="text-gray-400 text-sm md:text-base">
+      USDX ecosystem token allocation.
+    </p>
+
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+
+    {[
+      {
+        title: 'Liquidity',
+        value: '35%',
+      },
+      {
+        title: 'Staking',
+        value: '25%',
+      },
+      {
+        title: 'Marketing',
+        value: '20%',
+      },
+      {
+        title: 'Development',
+        value: '20%',
+      }
+    ].map((item, index) => (
+
+      <div
+        key={index}
+        className="bg-white/[0.03] border border-white/10 rounded-[25px] md:rounded-[35px] p-5 md:p-8 text-center hover:border-[#ff5c00]/40 transition-all"
+      >
+
+        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-[#ff5c00] flex items-center justify-center mx-auto mb-5">
+
+          <span className="text-xl md:text-2xl font-black text-[#ff5c00]">
+            {item.value}
+          </span>
+
+        </div>
+
+        <h3 className="text-lg md:text-2xl font-black mb-2">
+          {item.title}
+        </h3>
+
+        <p className="text-gray-400 text-xs md:text-sm">
+          USDX Allocation
+        </p>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
             {[
               ['Roadmap', 'View our future plans and goals'],
               ['Tokenomics', 'Learn about token structure'],
