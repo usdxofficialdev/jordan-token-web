@@ -629,7 +629,7 @@ pb-2
 
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="flex md:grid md:grid-cols-4 gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-2">
 
             {[
               {
@@ -655,7 +655,7 @@ pb-2
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white/[0.03] border border-white/10 rounded-[30px] p-6 hover:border-[#ff5c00]/40 transition-all"
+                className="min-w-[240px] md:min-w-0 bg-white/[0.03] border border-white/10 rounded-[26px] p-5 hover:border-[#ff5c00]/40 transition-all snap-center"
               >
 
                 <p className="text-[#ff5c00] text-xs uppercase tracking-widest font-black mb-2">
