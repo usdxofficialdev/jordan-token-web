@@ -546,9 +546,9 @@ pb-2
         </section>
 
         {/* ABOUT */}
-        <section className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="mb-14 flex md:grid md:grid-cols-2 gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-2">
 
-          <div className="bg-white/[0.03] border border-white/10 rounded-[35px] p-8">
+          <div className="min-w-[92vw] md:min-w-0 bg-white/[0.03] border border-white/10 rounded-[28px] p-6 snap-center">
 
             <p className="text-[#ff5c00] uppercase tracking-[0.3em] text-xs font-black mb-4">
               What Is USDExchange
