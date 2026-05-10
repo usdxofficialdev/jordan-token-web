@@ -120,7 +120,14 @@ export default function Home() {
           >
             Whitepaper
           </a>
-        <w3m-button />
+        <button
+  onClick={openWallet}
+  className="px-6 py-3 bg-[#ff5c00] rounded-2xl font-black uppercase text-black hover:scale-105 transition-all"
+>
+  {wallet
+    ? `${wallet.slice(0, 6)}...${wallet.slice(-4)}`
+    : 'Connect Wallet'}
+</button>
 
         </div>
 
