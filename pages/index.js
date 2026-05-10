@@ -120,7 +120,7 @@ export default function Home() {
           >
             Whitepaper
           </a>
-
+        <w3m-button />
 
         </div>
 
