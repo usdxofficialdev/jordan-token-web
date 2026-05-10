@@ -181,11 +181,25 @@ const executeSwap = async () => {
   </div>
 
 </div>
-      <section className="grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-6 md:gap-10 items-start mb-10 md:mb-24">
+      <section className="
+flex
+md:grid
+md:grid-cols-1
+xl:grid-cols-[1.1fr_0.9fr]
+gap-4
+md:gap-10
+items-start
+mb-10
+md:mb-24
+overflow-x-auto
+snap-x
+snap-mandatory
+no-scrollbar
+">
   <div className="hidden md:block absolute top-[120px] left-0 right-0 h-[1px] bg-white/5"></div>
 
           {/* LEFT */}
-          <div>
+         <div className="min-w-[92vw] md:min-w-0 snap-center">
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ff5c00]/30 bg-[#ff5c00]/10 mb-6">
               <div className="w-2 h-2 rounded-full bg-[#ff5c00] animate-pulse"></div>
