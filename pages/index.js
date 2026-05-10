@@ -206,100 +206,136 @@ export default function Home() {
 </div>
 
           {/* SWAP */}
-<div className="bg-black/40 rounded-2xl p-5 border border-white/5">
+<div className="bg-black/40 rounded-2xl p-5 border border-white/5 mt-6">
 
-  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+  <div className="flex items-center justify-between mb-5">
 
-    <div className="flex-1 bg-black/50 rounded-2xl p-4 border border-white/10">
+    <h3 className="text-2xl font-black">
+      Swap Tokens
+    </h3>
 
-      <p className="text-xs text-gray-500 uppercase mb-3">
-        From
-      </p>
+    <div className="text-sm text-[#ff5c00] font-bold">
+      Secure Web3 Swap
+    </div>
 
-      <div className="flex justify-between items-center">
+  </div>
 
-        <input
-          placeholder="0.0"
-          className="bg-transparent outline-none text-2xl font-black w-full"
-        />
+  <div className="flex flex-col gap-4">
 
-        <button className="bg-[#ff5c00] px-4 py-2 rounded-xl font-black">
-          BNB
-        </button>
+    <div className="bg-black/50 rounded-3xl p-5 border border-white/10">
+
+      <div className="flex justify-between items-center mb-4">
+
+        <p className="text-gray-400 text-sm uppercase tracking-widest">
+          From
+        </p>
+
+        <p className="text-gray-500 text-sm">
+          Balance: {balance}
+        </p>
 
       </div>
 
-      <p className="text-right text-xs text-gray-500 mt-3">
-        Balance: {balance}
-      </p>
+      <div className="flex items-center justify-between gap-4">
+
+        <input
+          type="number"
+          placeholder="0.0"
+          className="bg-transparent outline-none text-4xl font-black w-full"
+        />
+
+        <select className="bg-[#ff5c00] text-black px-5 py-3 rounded-2xl font-black outline-none">
+
+          <option>BNB</option>
+          <option>USDT</option>
+          <option>ETH</option>
+          <option>BTC</option>
+
+        </select>
+
+      </div>
 
     </div>
 
-    <div className="text-[#ff5c00] text-3xl font-black rotate-90 md:rotate-0">
-  ⇄
-</div>
+    <div className="flex justify-center">
 
-    <div className="flex-1 bg-black/50 rounded-2xl p-4 border border-white/10">
+      <button
+        className="w-14 h-14 rounded-full bg-[#ff5c00] text-black text-3xl font-black"
+      >
+        ⇅
+      </button>
 
-      <p className="text-xs text-gray-500 uppercase mb-3">
-        To
-      </p>
+    </div>
 
-      <div className="flex justify-between items-center">
+    <div className="bg-black/50 rounded-3xl p-5 border border-white/10">
 
-        <input
-          placeholder="0.0"
-          className="bg-transparent outline-none text-2xl font-black w-full"
-        />
+      <div className="flex justify-between items-center mb-4">
 
-        <button className="bg-[#ff5c00] px-4 py-2 rounded-xl font-black">
-          USDX
-        </button>
+        <p className="text-gray-400 text-sm uppercase tracking-widest">
+          To
+        </p>
+
+        <p className="text-gray-500 text-sm">
+          Balance: 0
+        </p>
 
       </div>
 
-      <p className="text-right text-xs text-gray-500 mt-3">
-        Balance: {balance}
-      </p>
+      <div className="flex items-center justify-between gap-4">
+
+        <input
+          type="number"
+          placeholder="0.0"
+          className="bg-transparent outline-none text-4xl font-black w-full"
+        />
+
+        <select className="bg-[#ff5c00] text-black px-5 py-3 rounded-2xl font-black outline-none">
+
+          <option>USDX</option>
+          <option>USDT</option>
+          <option>ETH</option>
+          <option>BTC</option>
+          <option>BNB</option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+    <div className="flex justify-between items-center px-2 mt-2 text-sm text-gray-500">
+
+      <span>Slippage: 0.5%</span>
+
+      <span>Gas Fee: ~$0.12</span>
+
+    </div>
+
+    <div className="mt-3">
+
+      {wallet ? (
+
+        <button
+          className="w-full h-[72px] rounded-[24px] bg-green-500 text-black text-2xl font-black"
+        >
+          SWAP TOKENS • {balance} BNB
+        </button>
+
+      ) : (
+
+        <button
+          className="w-full h-[72px] rounded-[24px] bg-[#ff5c00] text-black text-2xl font-black"
+        >
+          CONNECT WALLET ABOVE
+        </button>
+
+      )}
 
     </div>
 
   </div>
 
-  <div className="flex justify-between text-sm text-gray-500 px-1 mt-5">
-
-    <span>Slippage: 0.5%</span>
-
-    <span>Gas Fee: ~$0.12</span>
-
-  </div>
-
-<div className="mt-6">
-
-  {wallet ? (
-
-    <button
-      className="w-full h-[70px] rounded-[20px]
-      bg-green-500 text-black font-black text-[24px]"
-    >
-      SWAP TOKENS
-    </button>
-
-  ) : (
-<button
-  onClick={openWallet}
-  className="w-full h-[70px] rounded-[20px] bg-[#ff5c00] text-black font-black text-[24px]"
->
-  {wallet ? `CONNECTED: ${balance} BNB` : 'CONNECT WALLET'}
-</button>
-
-  )}
-
 </div>
-
-    </div>
-
-      </div>
       
         </section>
 
