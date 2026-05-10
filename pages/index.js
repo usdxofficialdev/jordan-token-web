@@ -1,7 +1,7 @@
 import React from 'react';
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
 import { ethers } from 'ethers';
-
+import { useWeb3Modal } from '@web3modal/ethers/react';
 const projectId = 'f523ce22bed6a9a2acc600cadd1473c5';
 
 const mainnet = {
@@ -35,6 +35,8 @@ createWeb3Modal({
 });
 
 export default function Home() {
+  
+  const { open } = useWeb3Modal()
 
   const [wallet, setWallet] = React.useState(null)
   const [balance, setBalance] = React.useState('0')
@@ -43,67 +45,35 @@ const [toToken, setToToken] = React.useState('USDX')
 
 const [fromAmount, setFromAmount] = React.useState('')
 const [toAmount, setToAmount] = React.useState('')
-  React.useEffect(() => {
+const openWallet = async () => {
 
-  const calculateSwap = async () => {
+  try {
 
-    if (!fromAmount || fromAmount <= 0) {
-      setToAmount('')
-      return
-    }
+    await open()
 
-    const prices = {
-      BNB: 650,
-      WBNB: 650,
-      USDT: 1,
-      USDC: 1,
-      DAI: 1,
-      USDX: 1
-    }
+    if (!window.ethereum) return
 
-    const fromPrice = prices[fromToken]
-    const toPrice = prices[toToken]
+    const provider = new ethers.BrowserProvider(window.ethereum)
 
-    const usdValue = fromAmount * fromPrice
+    const accounts = await provider.send('eth_requestAccounts', [])
 
-    const received = usdValue / toPrice
+    const account = accounts[0]
 
-    setToAmount(received.toFixed(4))
+    setWallet(account)
+
+    const balanceWei = await provider.getBalance(account)
+
+    const balanceEth = ethers.formatEther(balanceWei)
+
+    setBalance(parseFloat(balanceEth).toFixed(4))
+
+  } catch (err) {
+
+    console.log(err)
+
   }
 
-  calculateSwap()
-
-}, [fromAmount, fromToken, toToken])
-
-  const openWallet = async () => {
-    
-    if (!window.ethereum) {
-  alert('MetaMask not detected')
-  return
 }
-    
-    try {
-
-      const accounts = await window.ethereum.request({
-        method: 'eth_requestAccounts'
-      })
-
-      const account = accounts[0]
-
-      setWallet(account)
-
-      const provider = new ethers.BrowserProvider(window.ethereum)
-
-      const balanceWei = await provider.getBalance(account)
-
-      const balanceEth = ethers.formatEther(balanceWei)
-
-      setBalance(parseFloat(balanceEth).toFixed(4))
-
-    } catch (err) {
-      console.log(err)
-    }
-  }
 const switchTokens = () => {
 
   const oldFrom = fromToken
