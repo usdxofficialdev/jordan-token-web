@@ -244,8 +244,7 @@ no-scrollbar
           </div>
 
           {/* RIGHT */}
-         <div className="bg-white/[0.03] border border-white/10 rounded-[30px] p-4 md:p-5 w-full max-w-[520px] mx-auto backdrop-blur-2xl shadow-[0_0_40px_rgba(255,92,0,0.08)] sticky top-[100px]">
-
+        <div className="min-w-[92vw] md:min-w-0 snap-center bg-white/[0.03] border border-white/10 rounded-[30px] p-4 md:p-5 w-full max-w-[520px] mx-auto backdrop-blur-2xl shadow-[0_0_40px_rgba(255,92,0,0.08)] md:sticky top-[100px]">
             <div className="flex justify-between items-center mb-6">
 
               <h3 className="text-lg font-black">
@@ -270,6 +269,9 @@ no-scrollbar
   ></iframe>
 
 </div>
+  <div className="md:hidden text-center text-xs uppercase tracking-[0.3em] text-gray-500 mb-3">
+  Swipe →
+</div>    
 <div className="flex justify-center gap-2 py-4">
 
   <div className="w-10 h-[4px] rounded-full bg-[#ff5c00]"></div>
