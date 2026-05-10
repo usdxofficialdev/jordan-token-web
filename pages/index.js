@@ -162,9 +162,9 @@ const executeSwap = async () => {
 
       </nav>
 
-<main className="relative z-10 max-w-[380px] md:max-w-7xl mx-auto px-2 md:px-6 pt-2 md:pt-20">
+<main className="relative z-10 w-full max-w-[430px] md:max-w-7xl mx-auto px-3 md:px-6 pt-3 md:pt-20">
         {/* HERO */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-24">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 items-center mb-10 md:mb-24">
 
           {/* LEFT */}
           <div>
@@ -176,7 +176,7 @@ const executeSwap = async () => {
               </span>
             </div>
 
-            <h2 className="text-[42px] md:text-7xl font-black uppercase leading-[0.9] mb-4">
+            <h2 className="text-[34px] md:text-7xl font-black uppercase leading-[0.9] mb-4">
               Advanced
               <br />
               <span className="text-[#ff5c00]">
@@ -226,7 +226,7 @@ const executeSwap = async () => {
 
             </div>
 
-    <div className="h-[420px] rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+   <div className="h-[220px] md:h-[420px] rounded-2xl overflow-hidden border border-white/10 bg-black/40">
 
   <iframe
     src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_chart&symbol=BINANCE:BTCUSDT&interval=15&hidesidetoolbar=1&theme=dark&style=1&timezone=Etc/UTC&withdateranges=1&hideideas=1"
@@ -240,7 +240,7 @@ const executeSwap = async () => {
 </div>
 
   {/* ADVANCED BSC SWAP */}
-<div className="mt-6 bg-[#0b0b0b] border border-white/10 rounded-[20px] p-2 backdrop-blur-2xl shadow-2xl">
+<div className="mt-6 bg-[#0b0b0b] border border-white/10 rounded-[20px] p-3 md:p-5 backdrop-blur-2xl shadow-2xl">
 
   {/* TOP */}
   <div className="flex items-center justify-between mb-7">
