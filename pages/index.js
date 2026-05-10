@@ -76,159 +76,6 @@ const openWallet = async () => {
 }
 const switchTokens = () => {
 
-const executeSwap = async () => {
-
-  alert('Swap Working')
-
-} 
-  try {
-
-    const provider = new ethers.BrowserProvider(window.ethereum)
-
-    const signer = await provider.getSigner()
-
-    const PANCAKE_ROUTER =
-      '0x10ED43C718714eb63d5aA57B78B54704E256024E'
-
-    const ROUTER_ABI = [
-
-      'function swapExactETHForTokens(uint amountOutMin,address[] calldata path,address to,uint deadline) payable returns (uint[] memory amounts)',
-
-      'function swapExactTokensForETH(uint amountIn,uint amountOutMin,address[] calldata path,address to,uint deadline) returns (uint[] memory amounts)',
-
-      'function swapExactTokensForTokens(uint amountIn,uint amountOutMin,address[] calldata path,address to,uint deadline) returns (uint[] memory amounts)'
-
-    ]
-
-    const router = new ethers.Contract(
-      PANCAKE_ROUTER,
-      ROUTER_ABI,
-      signer
-    )
-
-    const tokenAddresses = {
-
-      BNB: '0x0000000000000000000000000000000000000000',
-
-      WBNB: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-
-      USDT: '0x55d398326f99059fF775485246999027B3197955',
-
-      USDC: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
-
-      DAI: '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
-
-      USDX: 'PASTE_USDX_CONTRACT'
-    }
-
-    const fromAddress = tokenAddresses[fromToken]
-
-    const toAddress = tokenAddresses[toToken]
-
-    const deadline =
-      Math.floor(Date.now() / 1000) + 60 * 10
-
-    const amountIn =
-      ethers.parseEther(fromAmount)
-
-    let tx
-
-    // BNB → TOKEN
-    if (fromToken === 'BNB') {
-
-      const path = [
-        tokenAddresses.WBNB,
-        toAddress
-      ]
-
-      tx = await router.swapExactETHForTokens(
-        0,
-        path,
-        wallet,
-        deadline,
-        {
-          value: amountIn
-        }
-      )
-
-    }
-
-    // TOKEN → BNB
-    else if (toToken === 'BNB') {
-
-      const token = new ethers.Contract(
-        fromAddress,
-        [
-          'function approve(address spender,uint amount) public returns(bool)'
-        ],
-        signer
-      )
-
-      await token.approve(
-        PANCAKE_ROUTER,
-        amountIn
-      )
-
-      const path = [
-        fromAddress,
-        tokenAddresses.WBNB
-      ]
-
-      tx = await router.swapExactTokensForETH(
-        amountIn,
-        0,
-        path,
-        wallet,
-        deadline
-      )
-
-    }
-
-    // TOKEN → TOKEN
-    else {
-
-      const token = new ethers.Contract(
-        fromAddress,
-        [
-          'function approve(address spender,uint amount) public returns(bool)'
-        ],
-        signer
-      )
-
-      await token.approve(
-        PANCAKE_ROUTER,
-        amountIn
-      )
-
-      const path = [
-        fromAddress,
-        toAddress
-      ]
-
-      tx = await router.swapExactTokensForTokens(
-        amountIn,
-        0,
-        path,
-        wallet,
-        deadline
-      )
-
-    }
-
-    await tx.wait()
-
-    alert('Swap Successful')
-
-  } catch (err) {
-
-    console.log(err)
-
-    alert('Swap Failed')
-
-  }
-
-}
-
   const oldFrom = fromToken
   const oldTo = toToken
 
@@ -241,6 +88,17 @@ const executeSwap = async () => {
   setFromAmount(oldToAmount)
   setToAmount(oldFromAmount)
 }
+
+const executeSwap = async () => {
+
+  if (!wallet) {
+    openWallet()
+    return
+  }
+
+  alert(`Swapping ${fromAmount} ${fromToken} to ${toToken}`)
+}
+
   const chartBars = [40, 70, 55, 90, 60, 120, 85, 140, 100, 170, 130, 190];
 
   return (
