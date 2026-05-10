@@ -203,7 +203,7 @@ const switchTokens = () => {
           </div>
 
           {/* RIGHT */}
-          <div className="bg-white/[0.03] border border-white/10 rounded-[28px] p-5 backdrop-blur-xl">
+          <div className="bg-white/[0.03] border border-white/10 rounded-[24px] p-3 backdrop-blur-xl">
 
             <div className="flex justify-between items-center mb-6">
 
@@ -231,7 +231,7 @@ const switchTokens = () => {
 </div>
 
   {/* ADVANCED BSC SWAP */}
-<div className="mt-6 bg-[#0b0b0b] border border-white/10 rounded-[28px] p-5 backdrop-blur-2xl shadow-2xl">
+<div className="mt-6 bg-[#0b0b0b] border border-white/10 rounded-[24px] p-3 backdrop-blur-2xl shadow-2xl">
 
   {/* TOP */}
   <div className="flex items-center justify-between mb-7">
