@@ -162,9 +162,10 @@ const executeSwap = async () => {
 
       </nav>
 
-<main className="relative z-10 w-full max-w-[430px] md:max-w-7xl mx-auto px-3 md:px-6 pt-3 md:pt-20">
+<main className="relative z-10 w-full max-w-[1600px] mx-auto px-2 md:px-6 pt-2 md:pt-10">
         {/* HERO */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 items-center mb-10 md:mb-24">
+  <div className="hidden md:block absolute top-[120px] left-0 right-0 h-[1px] bg-white/5"></div>
 
           {/* LEFT */}
           <div>
