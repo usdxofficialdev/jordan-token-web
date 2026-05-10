@@ -102,7 +102,7 @@ const executeSwap = async () => {
   const chartBars = [40, 70, 55, 90, 60, 120, 85, 140, 100, 170, 130, 190];
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden md:overflow-x-hidden overflow-y-auto">
 
       <div
         className="fixed inset-0 opacity-20"
@@ -934,6 +934,33 @@ no-scrollbar
       </main>
 
       {/* FOOTER */}
+<div className="md:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-black/90 backdrop-blur-2xl">
+
+  <div className="grid grid-cols-4 py-3">
+
+    <button className="flex flex-col items-center text-[#ff5c00] text-xs font-bold">
+      <span>⌂</span>
+      <span>Home</span>
+    </button>
+
+    <button className="flex flex-col items-center text-gray-400 text-xs">
+      <span>⇄</span>
+      <span>Swap</span>
+    </button>
+
+    <button className="flex flex-col items-center text-gray-400 text-xs">
+      <span>◉</span>
+      <span>Earn</span>
+    </button>
+
+    <button className="flex flex-col items-center text-gray-400 text-xs">
+      <span>☰</span>
+      <span>Menu</span>
+    </button>
+
+  </div>
+
+</div>
       <footer className="border-t border-white/10 py-16 text-center relative z-10 bg-black/40">
 
         <div className="max-w-5xl mx-auto px-6">
