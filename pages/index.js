@@ -76,13 +76,12 @@ const openWallet = async () => {
 }
 const switchTokens = () => {
 
-  const executeSwap = async () => {
+const executeSwap = async () => {
 
-  if (!wallet) {
-    openWallet()
-    return
-  }
+  alert('Swap Working')
 
+}
+  
   try {
 
     const provider = new ethers.BrowserProvider(window.ethereum)
