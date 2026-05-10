@@ -189,7 +189,7 @@ export default function Home() {
 
             <div className="flex justify-between items-center mb-6">
 
-              <h3 className="text-2xl font-black">
+              <h3 className="text-lg font-black">
                 USDX / BNB
               </h3>
 
@@ -217,7 +217,7 @@ export default function Home() {
 
   <div className="flex items-center justify-between mb-5">
 
-    <h3 className="text-2xl font-black">
+    <h3 className="text-lg font-black">
       Swap Tokens
     </h3>
 
@@ -316,13 +316,13 @@ export default function Home() {
 
       {wallet ? (
 
-        <button className="w-full h-[72px] rounded-[24px] bg-green-500 text-black text-2xl font-black">
+        <button className="w-full h-[58px] rounded-[18px] bg-green-500 text-black text-lg font-black">
           SWAP TOKENS • {balance} BNB
         </button>
 
       ) : (
 
-        <button className="w-full h-[72px] rounded-[24px] bg-[#ff5c00] text-black text-2xl font-black">
+        <button className="w-full h-[58px] rounded-[18px] bg-[#ff5c00] text-black text-lg font-black">
           CONNECT WALLET ABOVE
         </button>
 
@@ -499,7 +499,7 @@ export default function Home() {
                   {item.phase}
                 </p>
 
-                <h4 className="text-2xl font-black mb-3">
+                <h4 className="text-lg font-black mb-3">
                   {item.title}
                 </h4>
 
@@ -659,7 +659,7 @@ export default function Home() {
               className="bg-white/[0.03] border border-white/10 rounded-[30px] p-8 text-center hover:border-[#ff5c00]/40 transition-all"
             >
 
-              <h3 className="text-2xl font-black mb-3">
+              <h3 className="text-lg font-black mb-3">
                 Twitter / X
               </h3>
 
@@ -676,7 +676,7 @@ export default function Home() {
               className="bg-white/[0.03] border border-white/10 rounded-[30px] p-8 text-center hover:border-[#ff5c00]/40 transition-all"
             >
 
-              <h3 className="text-2xl font-black mb-3">
+              <h3 className="text-lg font-black mb-3">
                 Telegram
               </h3>
 
@@ -693,7 +693,7 @@ export default function Home() {
               className="bg-white/[0.03] border border-white/10 rounded-[30px] p-8 text-center hover:border-[#ff5c00]/40 transition-all"
             >
 
-              <h3 className="text-2xl font-black mb-3">
+              <h3 className="text-lg font-black mb-3">
                 GitHub
               </h3>
 
@@ -708,7 +708,7 @@ export default function Home() {
               className="bg-[#ff5c00]/10 border border-[#ff5c00]/30 rounded-[30px] p-8 text-center hover:scale-[1.02] transition-all"
             >
 
-              <h3 className="text-2xl font-black mb-3 text-[#ff5c00]">
+              <h3 className="text-lg font-black mb-3 text-[#ff5c00]">
                 Whitepaper
               </h3>
 
