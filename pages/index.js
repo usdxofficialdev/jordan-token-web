@@ -819,7 +819,7 @@ pb-2
               href="https://twitter.com"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/[0.03] border border-white/10 rounded-[30px] p-8 text-center hover:border-[#ff5c00]/40 transition-all"
+              className="min-w-[240px] md:min-w-0 bg-white/[0.03] border border-white/10 rounded-[26px] p-6 text-center hover:border-[#ff5c00]/40 transition-all snap-center"
             >
 
               <h3 className="text-lg font-black mb-3">
@@ -836,7 +836,7 @@ pb-2
               href="https://t.me"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/[0.03] border border-white/10 rounded-[30px] p-8 text-center hover:border-[#ff5c00]/40 transition-all"
+              className="min-w-[240px] md:min-w-0 bg-white/[0.03] border border-white/10 rounded-[26px] p-6 text-center hover:border-[#ff5c00]/40 transition-all snap-center"
             >
 
               <h3 className="text-lg font-black mb-3">
@@ -853,7 +853,7 @@ pb-2
               href="https://github.com"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/[0.03] border border-white/10 rounded-[30px] p-8 text-center hover:border-[#ff5c00]/40 transition-all"
+              className="min-w-[240px] md:min-w-0 bg-white/[0.03] border border-white/10 rounded-[26px] p-6 text-center hover:border-[#ff5c00]/40 transition-all snap-center"
             >
 
               <h3 className="text-lg font-black mb-3">
