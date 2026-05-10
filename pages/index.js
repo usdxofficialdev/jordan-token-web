@@ -182,7 +182,7 @@ const switchTokens = () => {
 
       </nav>
 
-      <main className="relative z-10 max-w-7xl mx-auto px-6 pt-20">
+    <main className="relative z-10 max-w-[430px] md:max-w-7xl mx-auto px-3 md:px-6 pt-4 md:pt-20">
 
         {/* HERO */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-24">
