@@ -168,37 +168,10 @@ export default function Home() {
       <main className="max-w-[1600px] mx-auto px-4 md:px-8 pt-6 pb-24">
 
         {/* HERO */}
-        <section className="grid xl:grid-cols-[0.8fr_1fr_0.72fr] gap-6">
+        <section className="grid xl:grid-cols-[1.45fr_0.75fr] gap-6">
 
           {/* LEFT */}
-          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-8">
-
-            <h1 className="text-7xl font-black mb-6">
-              USDX
-            </h1>
-
-            <h2 className="text-5xl font-black leading-tight mb-6">
-              The Future of
-              <br />
-              Decentralized Finance
-            </h2>
-
-            <p className="text-gray-400 text-lg mb-10">
-              Built on BNB Smart Chain
-            </p>
-
-            <div className="flex gap-4 mb-10">
-
-              <button className="bg-violet-600 h-[56px] px-8 rounded-2xl font-black">
-                Buy USDX
-              </button>
-
-              <button className="border border-white/10 h-[56px] px-8 rounded-2xl font-black">
-                Launch dApp
-              </button>
-
-            </div>
-
+         
             <div className="grid grid-cols-2 gap-4">
 
               {[
@@ -230,7 +203,7 @@ export default function Home() {
           </div>
 
           {/* CHART */}
-          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6">
+         <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6 min-h-[820px]">
 
             <div className="flex justify-between items-center mb-6">
 
@@ -244,7 +217,7 @@ export default function Home() {
 
             </div>
 
-            <div className="h-[520px] rounded-[28px] overflow-hidden border border-white/10">
+            <div className="h-[720px] rounded-[28px] overflow-hidden border border-white/10">
 
               <iframe
                 src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&interval=15&theme=dark&style=1"
@@ -271,6 +244,85 @@ export default function Home() {
               </button>
 
             </div>
+
+{/* OPEN POSITIONS */}
+
+<div className="mt-8 border border-white/10 rounded-[24px] bg-black p-5">
+
+  <div className="flex items-center justify-between mb-5">
+
+    <h3 className="text-xl font-black">
+      Open Positions
+    </h3>
+
+    <span className="text-green-400 text-sm">
+      Live
+    </span>
+
+  </div>
+
+  <div className="space-y-4">
+
+    <div className="border border-white/10 rounded-2xl p-4 bg-[#090909]">
+
+      <div className="flex justify-between mb-2">
+
+        <span className="font-bold">
+          BUY USDX
+        </span>
+
+        <span className="text-green-400">
+          +12.45%
+        </span>
+
+      </div>
+
+      <div className="flex justify-between text-sm text-gray-400">
+
+        <span>
+          Entry: 0.0084
+        </span>
+
+        <span>
+          Size: 250 USD
+        </span>
+
+      </div>
+
+    </div>
+
+    <div className="border border-white/10 rounded-2xl p-4 bg-[#090909]">
+
+      <div className="flex justify-between mb-2">
+
+        <span className="font-bold">
+          BUY BNB
+        </span>
+
+        <span className="text-red-400">
+          -2.14%
+        </span>
+
+      </div>
+
+      <div className="flex justify-between text-sm text-gray-400">
+
+        <span>
+          Entry: 602
+        </span>
+
+        <span>
+          Size: 120 USD
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
 
             {/* FROM */}
             <div className="bg-black border border-white/10 rounded-[24px] p-5">
