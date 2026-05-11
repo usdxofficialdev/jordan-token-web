@@ -401,7 +401,6 @@ export default function Home() {
 ['Whitepaper', '/info#whitepaper']
 ].map(([title, link]) => (
 
-<a
 
             <a
               key={title}
