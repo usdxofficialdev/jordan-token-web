@@ -120,7 +120,7 @@ export default function Home() {
         <div className="max-w-[1600px] mx-auto px-4 md:px-8 h-[78px] flex items-center justify-between">
 
           {/* LEFT */}
-        {/* LEFT */}
+      
 <div className="border border-white/10 rounded-[30px] bg-[#090909] p-6 min-h-[540px]">
 
   <div className="flex items-center gap-3 mb-8">
