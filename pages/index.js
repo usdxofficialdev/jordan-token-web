@@ -200,7 +200,6 @@ export default function Home() {
 
             </div>
 
-          </div>
 
           {/* CHART */}
          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6 min-h-[820px]">
