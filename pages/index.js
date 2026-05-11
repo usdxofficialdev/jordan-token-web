@@ -22,8 +22,8 @@ const bsc = {
 };
 
 const metadata = {
-  name: 'USDExchange | USDX',
-  description: 'USDX Digital Asset Ecosystem',
+  name: 'USDExchange',
+  description: 'USDX Exchange',
   url: 'https://metaworld-official.vercel.app',
   icons: ['https://metaworld-official.vercel.app/logo.png']
 };
@@ -90,22 +90,10 @@ export default function Home() {
 
   };
 
-  const executeSwap = async () => {
-
-    if (!wallet) {
-      openWallet();
-      return;
-    }
-
-    alert(`Swapping ${fromAmount} ${fromToken} to ${toToken}`);
-
-  };
-
   return (
 
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
 
-      {/* BACKGROUND */}
       <div
         className="fixed inset-0 opacity-20 pointer-events-none"
         style={{
@@ -117,113 +105,56 @@ export default function Home() {
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-2xl">
 
-        <div className="max-w-[1600px] mx-auto px-4 md:px-8 h-[78px] flex items-center justify-between">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-8 h-[80px] flex items-center justify-between">
 
-          {/* LEFT */}
-      
-<div className="border border-white/10 rounded-[30px] bg-[#090909] p-6 min-h-[540px]">
+          <div className="flex items-center gap-3">
 
-  <div className="flex items-center gap-3 mb-8">
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="w-11 h-11 rounded-full"
+            />
 
-    <img
-      src="/logo.png"
-      alt="logo"
-      className="w-14 h-14"
-    />
+            <h1 className="text-2xl font-black">
+              USDX
+            </h1>
 
-    <h1 className="text-5xl font-black">
-      USDX
-    </h1>
+          </div>
 
-  </div>
-
-  <h2 className="text-4xl font-black leading-tight mb-5">
-    Decentralized
-    <br />
-    Exchange Ecosystem
-  </h2>
-
-  <p className="text-gray-400 text-base leading-relaxed mb-8">
-    Trade, earn, stake and grow with the future of decentralized finance powered by USDExchange.
-  </p>
-
-  <div className="flex gap-4 mb-8">
-
-    <button className="h-[52px] px-8 rounded-2xl bg-violet-600 hover:bg-violet-500 transition font-bold">
-      Launch App
-    </button>
-
-    <button className="h-[52px] px-8 rounded-2xl border border-white/10 hover:border-violet-500 transition font-bold">
-      Buy USDX
-    </button>
-
-  </div>
-
-  <div className="grid grid-cols-2 gap-4">
-
-    {[
-      ['$1.2M+', 'Market Cap'],
-      ['5,432+', 'Holders'],
-      ['$320K+', 'Liquidity'],
-      ['12.4%', 'APY']
-    ].map(([v, t]) => (
-
-      <div
-        key={t}
-        className="bg-black border border-white/10 rounded-[22px] p-5"
-      >
-
-        <h3 className="text-2xl font-black mb-2">
-          {v}
-        </h3>
-
-        <p className="text-gray-500 text-sm">
-          {t}
-        </p>
-
-      </div>
-
-    ))}
-
-  </div>
-
-</div>
-          {/* CENTER */}
           <div className="hidden md:flex items-center gap-10">
 
             {[
-              'Trade',
-              'Chart',
-              'Tokenomics',
-              'Roadmap',
-              'Community'
-            ].map((item) => (
+              ['Trade', '#'],
+              ['Chart', '#'],
+              ['Tokenomics', '/tokenomics'],
+              ['Roadmap', '/roadmap'],
+              ['Community', '/community']
+            ].map(([name, link]) => (
 
               <a
-                key={item}
-                href="#"
-                className="text-sm text-gray-300 hover:text-white transition"
+                key={name}
+                href={link}
+                className="text-gray-300 hover:text-white transition"
               >
-                {item}
+                {name}
               </a>
 
             ))}
 
           </div>
 
-          {/* RIGHT */}
           <div className="flex items-center gap-4">
 
             <button
               onClick={openWallet}
-              className="hidden md:flex h-[48px] px-6 rounded-2xl bg-violet-600 hover:bg-violet-500 transition items-center justify-center font-bold"
+              className="bg-violet-600 hover:bg-violet-500 transition px-6 h-[50px] rounded-2xl font-black"
             >
               {wallet
                 ? `${wallet.slice(0, 6)}...${wallet.slice(-4)}`
                 : 'Connect Wallet'}
             </button>
 
-            <button className="text-2xl">
+            <button className="text-3xl">
               ☰
             </button>
 
@@ -234,88 +165,63 @@ export default function Home() {
       </nav>
 
       {/* MAIN */}
-      <main className="max-w-[1600px] mx-auto px-3 md:px-8 pt-4 md:pt-10 pb-32">
+      <main className="max-w-[1600px] mx-auto px-4 md:px-8 pt-6 pb-24">
 
-        {/* ================= MOBILE APP STYLE ================= */}
-        <div className="md:hidden">
+        {/* HERO */}
+        <section className="grid xl:grid-cols-[0.8fr_1fr_0.72fr] gap-6">
 
-          {/* TOP BAR */}
-          <div className="flex items-center justify-between mb-5">
+          {/* LEFT */}
+          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-8">
 
-            <button className="text-2xl">
-              ☰
-            </button>
+            <h1 className="text-7xl font-black mb-6">
+              USDX
+            </h1>
 
-            <div className="flex items-center gap-2">
+            <h2 className="text-5xl font-black leading-tight mb-6">
+              The Future of
+              <br />
+              Decentralized Finance
+            </h2>
 
-              <img
-                src="/logo.png"
-                alt="logo"
-                className="w-9 h-9"
-              />
+            <p className="text-gray-400 text-lg mb-10">
+              Built on BNB Smart Chain
+            </p>
 
-              <h1 className="font-black text-xl">
-                USDX
-              </h1>
+            <div className="flex gap-4 mb-10">
 
-            </div>
+              <button className="bg-violet-600 h-[56px] px-8 rounded-2xl font-black">
+                Buy USDX
+              </button>
 
-            <button className="text-xl">
-              🔔
-            </button>
-
-          </div>
-
-          {/* CHART CARD */}
-          <div className="rounded-[28px] border border-white/10 bg-[#090909] p-4 mb-5 shadow-2xl">
-
-            <div className="flex justify-between mb-3">
-
-              <div>
-
-                <p className="text-gray-400 text-sm">
-                  USDX / BNB
-                </p>
-
-                <h2 className="text-4xl font-black mt-2">
-                  $0.009842
-                </h2>
-
-              </div>
-
-              <span className="text-green-400 font-black">
-                +12.45%
-              </span>
+              <button className="border border-white/10 h-[56px] px-8 rounded-2xl font-black">
+                Launch dApp
+              </button>
 
             </div>
 
-            <div className="h-[180px] rounded-[20px] overflow-hidden border border-white/10 bg-black/40">
+            <div className="grid grid-cols-2 gap-4">
 
-              <iframe
-                src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_chart&symbol=BINANCE:BTCUSDT&interval=15&hidesidetoolbar=1&theme=dark&style=1&timezone=Etc/UTC&withdateranges=1&hideideas=1"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allowTransparency="true"
-                scrolling="no"
-              ></iframe>
+              {[
+                ['$1.2M+', 'Market Cap'],
+                ['5,432+', 'Holders'],
+                ['$320K+', 'Liquidity'],
+                ['12.4%', 'APY']
+              ].map(([value, title]) => (
 
-            </div>
-
-            <div className="flex justify-center gap-4 mt-4 text-xs">
-
-              {['1m', '5m', '1h', '1D', '1W'].map((t) => (
-
-                <button
-                  key={t}
-                  className={`px-4 py-2 rounded-xl ${
-                    t === '1D'
-                      ? 'bg-violet-700'
-                      : 'bg-white/5'
-                  }`}
+                <div
+                  key={title}
+                  className="border border-white/10 rounded-[24px] bg-black p-6"
                 >
-                  {t}
-                </button>
+
+                  <h3 className="text-4xl font-black mb-3">
+                    {value}
+                  </h3>
+
+                  <p className="text-gray-500">
+                    {title}
+                  </p>
+
+                </div>
 
               ))}
 
@@ -323,12 +229,40 @@ export default function Home() {
 
           </div>
 
-          {/* SWAP */}
-          <div className="rounded-[28px] border border-white/10 bg-[#090909] p-4 shadow-2xl">
+          {/* CHART */}
+          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6">
 
-            <div className="flex justify-between items-center mb-5">
+            <div className="flex justify-between items-center mb-6">
 
               <h2 className="text-2xl font-black">
+                USDX / BNB
+              </h2>
+
+              <span className="text-green-400 font-black text-xl">
+                +12.45%
+              </span>
+
+            </div>
+
+            <div className="h-[520px] rounded-[28px] overflow-hidden border border-white/10">
+
+              <iframe
+                src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&interval=15&theme=dark&style=1"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+              ></iframe>
+
+            </div>
+
+          </div>
+
+          {/* SWAP */}
+          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6">
+
+            <div className="flex justify-between items-center mb-8">
+
+              <h2 className="text-3xl font-black">
                 Swap
               </h2>
 
@@ -339,21 +273,26 @@ export default function Home() {
             </div>
 
             {/* FROM */}
-            <div className="bg-black border border-white/10 rounded-[20px] p-4">
+            <div className="bg-black border border-white/10 rounded-[24px] p-5">
 
-              <div className="flex justify-between mb-3 text-sm text-gray-500">
+              <div className="flex justify-between text-sm text-gray-500 mb-4">
+
                 <span>From</span>
-                <span>Balance: {wallet ? balance : '0'}</span>
+
+                <span>
+                  Balance: {wallet ? balance : '0'}
+                </span>
+
               </div>
 
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center justify-between gap-4">
 
                 <input
                   type="number"
-                  placeholder="0.0"
                   value={fromAmount}
                   onChange={(e) => setFromAmount(e.target.value)}
-                  className="bg-transparent text-3xl font-black outline-none w-full"
+                  placeholder="0.0"
+                  className="bg-transparent outline-none text-5xl font-black w-full"
                 />
 
                 <select
@@ -371,12 +310,11 @@ export default function Home() {
 
             </div>
 
-            {/* SWITCH */}
-            <div className="flex justify-center -my-2 z-20 relative">
+            <div className="flex justify-center -my-3 relative z-20">
 
               <button
                 onClick={switchTokens}
-                className="w-12 h-12 rounded-full bg-violet-700 border-[5px] border-black text-xl"
+                className="w-14 h-14 rounded-full bg-violet-700 border-[6px] border-black text-2xl"
               >
                 ⇅
               </button>
@@ -384,21 +322,24 @@ export default function Home() {
             </div>
 
             {/* TO */}
-            <div className="bg-black border border-white/10 rounded-[20px] p-4">
+            <div className="bg-black border border-white/10 rounded-[24px] p-5">
 
-              <div className="flex justify-between mb-3 text-sm text-gray-500">
+              <div className="flex justify-between text-sm text-gray-500 mb-4">
+
                 <span>To</span>
+
                 <span>Estimated</span>
+
               </div>
 
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center justify-between gap-4">
 
                 <input
                   type="number"
-                  placeholder="0.0"
                   value={toAmount}
                   onChange={(e) => setToAmount(e.target.value)}
-                  className="bg-transparent text-3xl font-black outline-none w-full"
+                  placeholder="0.0"
+                  className="bg-transparent outline-none text-5xl font-black w-full"
                 />
 
                 <select
@@ -416,376 +357,104 @@ export default function Home() {
 
             </div>
 
-            <div className="mt-6">
-
-              <button
-                onClick={executeSwap}
-                className="w-full h-[58px] rounded-[20px] bg-violet-600 hover:bg-violet-500 transition font-black text-lg"
-              >
-                {wallet
-                  ? `SWAP ${fromToken} → ${toToken}`
-                  : 'Connect Wallet'}
-              </button>
-
-            </div>
+            <button
+              onClick={openWallet}
+              className="w-full h-[60px] rounded-[22px] bg-violet-600 hover:bg-violet-500 transition text-xl font-black mt-8"
+            >
+              {wallet ? 'Start Swap' : 'Connect Wallet'}
+            </button>
 
           </div>
 
-          {/* MOBILE NAV */}
-          <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-black/90 backdrop-blur-2xl">
+        </section>
 
-            <div className="grid grid-cols-5 py-3">
+        {/* FEATURES */}
+        <section className="grid md:grid-cols-5 gap-5 mt-8">
 
-              {[
-                ['⌂', 'Home'],
-                ['⇄', 'Swap'],
-                ['◉', 'Earn'],
-                ['◈', 'Portfolio'],
-                ['☰', 'More']
-              ].map(([icon, label], i) => (
+          {[
+            ['Roadmap', '/roadmap'],
+            ['Tokenomics', '/tokenomics'],
+            ['Governance', '/governance'],
+            ['Community', '/community'],
+            ['Whitepaper', '/whitepaper']
+          ].map(([title, link]) => (
 
-                <button
-                  key={label}
-                  className={`flex flex-col items-center text-xs ${
-                    i === 0
-                      ? 'text-green-400'
-                      : 'text-gray-400'
-                  }`}
-                >
+            <a
+              key={title}
+              href={link}
+              className="border border-white/10 rounded-[30px] bg-[#090909] p-6 hover:border-violet-500 transition block"
+            >
 
-                  <span className="text-lg">
-                    {icon}
-                  </span>
+              <h3 className="text-2xl font-black mb-4">
+                {title}
+              </h3>
 
-                  <span className="mt-1">
-                    {label}
-                  </span>
-
-                </button>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* ================= DESKTOP EXCHANGE STYLE ================= */}
-        <div className="hidden md:block">
-
-          {/* HERO GRID */}
-          <section className="grid xl:grid-cols-[0.8fr_1fr_0.72fr] gap-4 items-start">
-
-            {/* LEFT */}
-            <div className="border border-white/10 rounded-[35px] bg-[#090909] p-8 min-h-[650px]">
-
-
-  <h1 className="text-7xl font-black mb-6">
-    USDX
-  </h1>
-
-              <h2 className="text-5xl font-bold leading-tight mb-6">
-                The Future of
-                <br />
-                Decentralized Finance
-              </h2>
-
-              <p className="text-gray-400 text-lg leading-relaxed mb-10">
-                Built on BNB Smart Chain
+              <p className="text-gray-400 mb-6">
+                Open {title} page
               </p>
 
-              <div className="flex gap-4 mb-10">
+              <span className="text-violet-400 font-black">
+                View →
+              </span>
 
-                <button className="h-[52px] px-8 rounded-2xl bg-violet-600 font-bold">
-                  Buy USDX
-                </button>
+            </a>
 
-                <button className="h-[52px] px-8 rounded-2xl border border-white/10 font-bold">
-                  Launch dApp
-                </button>
+          ))}
 
-              </div>
+        </section>
 
-              <div className="grid grid-cols-4 gap-3">
+        {/* TOKENOMICS */}
+        <section className="mt-24">
 
-                {[
-                  ['$1.2M+', 'Market Cap'],
-                  ['5,432+', 'Holders'],
-                  ['$320K+', 'Liquidity'],
-                  ['12.4%', 'Tax']
-                ].map(([v, t]) => (
+          <div className="text-center mb-14">
 
-                  <div
-                    key={t}
-                    className="bg-black border border-white/10 rounded-2xl p-4 text-center"
-                  >
+            <h2 className="text-5xl font-black mb-4">
+              Tokenomics
+            </h2>
 
-                    <h3 className="font-black text-lg">
-                      {v}
-                    </h3>
+            <p className="text-gray-400">
+              USDX ecosystem token allocation.
+            </p>
 
-                    <p className="text-gray-500 text-xs mt-1">
-                      {t}
-                    </p>
+          </div>
 
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-           </div>
-
-            {/* CENTER CHART */}
-            <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6">
-
-              <div className="flex justify-between items-center mb-6">
-
-                <h2 className="text-2xl font-black">
-                  USDX / BNB
-                </h2>
-
-                <span className="text-green-400 font-black text-xl">
-                  +12.45%
-                </span>
-
-              </div>
-
-              <div className="h-[520px] rounded-[28px] overflow-hidden border border-white/10">
-
-                <iframe
-                  src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_chart&symbol=BINANCE:BTCUSDT&interval=15&hidesidetoolbar=1&theme=dark&style=1&timezone=Etc/UTC&withdateranges=1&hideideas=1"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  allowTransparency="true"
-                  scrolling="no"
-                ></iframe>
-
-              </div>
-
-            </div>
-
-            {/* RIGHT SWAP */}
-            <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6 sticky top-[110px]">
-
-              <div className="flex justify-between items-center mb-8">
-
-                <h2 className="text-3xl font-black">
-                  Swap
-                </h2>
-
-                <button>
-                  ⚙️
-                </button>
-
-              </div>
-
-              {/* FROM */}
-              <div className="bg-black border border-white/10 rounded-[24px] p-5">
-
-                <div className="flex justify-between text-sm text-gray-500 mb-4">
-
-                  <span>From</span>
-
-                  <span>
-                    Balance: {wallet ? balance : '0'}
-                  </span>
-
-                </div>
-
-                <div className="flex items-center justify-between gap-4">
-
-                  <input
-                    type="number"
-                    value={fromAmount}
-                    onChange={(e) => setFromAmount(e.target.value)}
-                    placeholder="0.0"
-                    className="bg-transparent outline-none text-5xl font-black w-full"
-                  />
-
-                  <select
-                    value={fromToken}
-                    onChange={(e) => setFromToken(e.target.value)}
-                    className="bg-[#141414] border border-white/10 rounded-2xl px-4 py-3 outline-none"
-                  >
-                    <option>BNB</option>
-                    <option>USDT</option>
-                    <option>USDC</option>
-                    <option>USDX</option>
-                  </select>
-
-                </div>
-
-              </div>
-
-              {/* SWITCH */}
-              <div className="flex justify-center -my-3 relative z-20">
-
-                <button
-                  onClick={switchTokens}
-                  className="w-14 h-14 rounded-full bg-violet-700 border-[6px] border-black text-2xl"
-                >
-                  ⇅
-                </button>
-
-              </div>
-
-              {/* TO */}
-              <div className="bg-black border border-white/10 rounded-[24px] p-5">
-
-                <div className="flex justify-between text-sm text-gray-500 mb-4">
-
-                  <span>To</span>
-
-                  <span>Estimated</span>
-
-                </div>
-
-                <div className="flex items-center justify-between gap-4">
-
-                  <input
-                    type="number"
-                    value={toAmount}
-                    onChange={(e) => setToAmount(e.target.value)}
-                    placeholder="0.0"
-                    className="bg-transparent outline-none text-5xl font-black w-full"
-                  />
-
-                  <select
-                    value={toToken}
-                    onChange={(e) => setToToken(e.target.value)}
-                    className="bg-[#141414] border border-white/10 rounded-2xl px-4 py-3 outline-none"
-                  >
-                    <option>USDX</option>
-                    <option>USDT</option>
-                    <option>USDC</option>
-                    <option>BNB</option>
-                  </select>
-
-                </div>
-
-              </div>
-
-              <div className="mt-8">
-
-                <button
-                  onClick={executeSwap}
-                  className="w-full h-[60px] rounded-[22px] bg-violet-600 hover:bg-violet-500 transition text-xl font-black"
-                >
-                  {wallet
-                    ? `SWAP ${fromToken} → ${toToken}`
-                    : 'Connect Wallet'}
-                </button>
-
-              </div>
-
-            </div>
-
-          </section>
-
-          {/* FEATURE CARDS */}
-          <section className="grid grid-cols-5 gap-5 mt-8">
+          <div className="grid md:grid-cols-4 gap-6">
 
             {[
-              ['Roadmap', 'View our future plans and goals'],
-              ['Tokenomics', 'Learn about token structure'],
-              ['Governance', 'Community powered future'],
-              ['Community', 'Join our global community'],
-              ['Whitepaper', 'Read official documentation']
-            ].map(([title, desc]) => (
+              ['35%', 'Liquidity'],
+              ['25%', 'Staking'],
+              ['20%', 'Marketing'],
+              ['20%', 'Development']
+            ].map(([value, title]) => (
 
               <div
                 key={title}
-                className="border border-white/10 rounded-[30px] bg-[#090909] p-6 hover:border-violet-500 transition"
+                className="border border-white/10 rounded-[35px] bg-[#090909] p-8 text-center"
               >
 
-                <h3 className="text-2xl font-black mb-4">
+                <div className="w-24 h-24 rounded-full border-4 border-orange-500 flex items-center justify-center mx-auto mb-6">
+
+                  <span className="text-3xl font-black text-orange-500">
+                    {value}
+                  </span>
+
+                </div>
+
+                <h3 className="text-2xl font-black mb-2">
                   {title}
                 </h3>
 
-                <p className="text-gray-400 leading-relaxed mb-6">
-                  {desc}
+                <p className="text-gray-400">
+                  USDX Allocation
                 </p>
-
-                <button className="text-violet-400 font-bold">
-                  View →
-                </button>
 
               </div>
 
             ))}
 
-          </section>
-            {/* TOKENOMICS */}
-<section className="mb-24">
+          </div>
 
-  <div className="text-center mb-14">
-
-    <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
-      Tokenomics
-    </h2>
-
-    <p className="text-gray-400 text-sm md:text-base">
-      USDX ecosystem token allocation.
-    </p>
-
-  </div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-
-    {[
-      {
-        title: 'Liquidity',
-        value: '35%',
-      },
-      {
-        title: 'Staking',
-        value: '25%',
-      },
-      {
-        title: 'Marketing',
-        value: '20%',
-      },
-      {
-        title: 'Development',
-        value: '20%',
-      }
-    ].map((item, index) => (
-
-      <div
-        key={index}
-        className="bg-white/[0.03] border border-white/10 rounded-[25px] md:rounded-[35px] p-5 md:p-8 text-center hover:border-[#ff5c00]/40 transition-all"
-      >
-
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-[#ff5c00] flex items-center justify-center mx-auto mb-5">
-
-          <span className="text-xl md:text-2xl font-black text-[#ff5c00]">
-            {item.value}
-          </span>
-
-        </div>
-
-        <h3 className="text-lg md:text-2xl font-black mb-2">
-          {item.title}
-        </h3>
-
-        <p className="text-gray-400 text-xs md:text-sm">
-          USDX Allocation
-        </p>
-
-      </div>
-
-    ))}
-
-  </div>
-
-</section>
-
-        </div>
+        </section>
 
       </main>
 
