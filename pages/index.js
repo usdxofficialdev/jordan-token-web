@@ -399,6 +399,9 @@ export default function Home() {
 ['Governance', '/info#governance'],
 ['Community', '/info#community'],
 ['Whitepaper', '/info#whitepaper']
+].map(([title, link]) => (
+
+<a
 
             <a
               key={title}
@@ -420,7 +423,7 @@ export default function Home() {
 
             </a>
 
-                ))}      
+                )}      
 
         </section>
 
