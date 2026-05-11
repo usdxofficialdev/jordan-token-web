@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           {/* SWAP */}
-          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6">
+          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6 sticky top-[95px]">
 
             <div className="flex justify-between items-center mb-8">
 
