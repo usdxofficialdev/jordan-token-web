@@ -393,13 +393,13 @@ export default function Home() {
         {/* FEATURES */}
         <section className="grid md:grid-cols-5 gap-5 mt-8">
 
-          {[
-            ['Roadmap', '/roadmap'],
-            ['Tokenomics', '/tokenomics'],
-            ['Governance', '/governance'],
-            ['Community', '/community'],
-            ['Whitepaper', '/whitepaper']
-          ].map(([title, link]) => (
+        [
+  ['Roadmap', '#roadmap'],
+  ['Tokenomics', '#tokenomics'],
+  ['Governance', '#governance'],
+  ['Community', '#community'],
+  ['Whitepaper', '#whitepaper']
+]
 
             <a
               key={title}
