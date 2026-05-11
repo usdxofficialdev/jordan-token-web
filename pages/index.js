@@ -636,7 +636,38 @@ export default function Home() {
 
           {/* FEATURE CARDS */}
           <section className="grid grid-cols-5 gap-5 mt-8">
-{/* TOKENOMICS */}
+
+            {[
+              ['Roadmap', 'View our future plans and goals'],
+              ['Tokenomics', 'Learn about token structure'],
+              ['Governance', 'Community powered future'],
+              ['Community', 'Join our global community'],
+              ['Whitepaper', 'Read official documentation']
+            ].map(([title, desc]) => (
+
+              <div
+                key={title}
+                className="border border-white/10 rounded-[30px] bg-[#090909] p-6 hover:border-violet-500 transition"
+              >
+
+                <h3 className="text-2xl font-black mb-4">
+                  {title}
+                </h3>
+
+                <p className="text-gray-400 leading-relaxed mb-6">
+                  {desc}
+                </p>
+
+                <button className="text-violet-400 font-bold">
+                  View →
+                </button>
+
+              </div>
+
+            ))}
+
+          </section>
+            {/* TOKENOMICS */}
 <section className="mb-24">
 
   <div className="text-center mb-14">
@@ -700,36 +731,6 @@ export default function Home() {
   </div>
 
 </section>
-            {[
-              ['Roadmap', 'View our future plans and goals'],
-              ['Tokenomics', 'Learn about token structure'],
-              ['Governance', 'Community powered future'],
-              ['Community', 'Join our global community'],
-              ['Whitepaper', 'Read official documentation']
-            ].map(([title, desc]) => (
-
-              <div
-                key={title}
-                className="border border-white/10 rounded-[30px] bg-[#090909] p-6 hover:border-violet-500 transition"
-              >
-
-                <h3 className="text-2xl font-black mb-4">
-                  {title}
-                </h3>
-
-                <p className="text-gray-400 leading-relaxed mb-6">
-                  {desc}
-                </p>
-
-                <button className="text-violet-400 font-bold">
-                  View →
-                </button>
-
-              </div>
-
-            ))}
-
-          </section>
 
         </div>
 
