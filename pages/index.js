@@ -171,35 +171,36 @@ export default function Home() {
         <section className="grid xl:grid-cols-[1.45fr_0.75fr] gap-6">
 
           {/* LEFT */}
+         {/* BIG CHART */}
+<div className="border border-white/10 rounded-[35px] bg-[#090909] p-6 min-h-[820px]">
+
+  <div className="flex justify-between items-center mb-6">
+
+    <h2 className="text-2xl font-black">
+      USDX / BNB
+    </h2>
+
+    <span className="text-green-400 font-black text-xl">
+      +12.45%
+    </span>
+
+  </div>
+
+  <div className="h-[720px] rounded-[28px] overflow-hidden border border-white/10">
+
+    <iframe
+      src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_chart&symbol=BINANCE:BTCUSDT&interval=15&hidesidetoolbar=1&theme=dark&style=1&timezone=Etc/UTC&withdateranges=1&hideideas=1"
+      width="100%"
+      height="100%"
+      frameBorder="0"
+      allowTransparency="true"
+      scrolling="no"
+    ></iframe>
+
+  </div>
+
+</div>
          
-            <div className="grid grid-cols-2 gap-4">
-
-              {[
-                ['$1.2M+', 'Market Cap'],
-                ['5,432+', 'Holders'],
-                ['$320K+', 'Liquidity'],
-                ['12.4%', 'APY']
-              ].map(([value, title]) => (
-
-                <div
-                  key={title}
-                  className="border border-white/10 rounded-[24px] bg-black p-6"
-                >
-
-                  <h3 className="text-4xl font-black mb-3">
-                    {value}
-                  </h3>
-
-                  <p className="text-gray-500">
-                    {title}
-                  </p>
-
-                </div>
-
-              ))}
-
-            </div>
-
 
           {/* CHART */}
          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6 min-h-[820px]">
