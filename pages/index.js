@@ -393,7 +393,7 @@ export default function Home() {
         {/* FEATURES */}
         <section className="grid md:grid-cols-5 gap-5 mt-8">
        
-
+   {[
  ['Roadmap', '/info#roadmap'],
 ['Tokenomics', '/info#tokenomics'],
 ['Governance', '/info#governance'],
@@ -422,7 +422,7 @@ export default function Home() {
 
             </a>
 
-                )}      
+            ))}         
 
         </section>
 
