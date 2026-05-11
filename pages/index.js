@@ -214,84 +214,6 @@ export default function Home() {
 
             </div>
 
-{/* OPEN POSITIONS */}
-
-<div className="mt-8 border border-white/10 rounded-[24px] bg-black p-5">
-
-  <div className="flex items-center justify-between mb-5">
-
-    <h3 className="text-xl font-black">
-      Open Positions
-    </h3>
-
-    <span className="text-green-400 text-sm">
-      Live
-    </span>
-
-  </div>
-
-  <div className="space-y-4">
-
-    <div className="border border-white/10 rounded-2xl p-4 bg-[#090909]">
-
-      <div className="flex justify-between mb-2">
-
-        <span className="font-bold">
-          BUY USDX
-        </span>
-
-        <span className="text-green-400">
-          +12.45%
-        </span>
-
-      </div>
-
-      <div className="flex justify-between text-sm text-gray-400">
-
-        <span>
-          Entry: 0.0084
-        </span>
-
-        <span>
-          Size: 250 USD
-        </span>
-
-      </div>
-
-    </div>
-
-    <div className="border border-white/10 rounded-2xl p-4 bg-[#090909]">
-
-      <div className="flex justify-between mb-2">
-
-        <span className="font-bold">
-          BUY BNB
-        </span>
-
-        <span className="text-red-400">
-          -2.14%
-        </span>
-
-      </div>
-
-      <div className="flex justify-between text-sm text-gray-400">
-
-        <span>
-          Entry: 602
-        </span>
-
-        <span>
-          Size: 120 USD
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
 
             {/* FROM */}
             <div className="bg-black border border-white/10 rounded-[24px] p-5">
@@ -383,6 +305,85 @@ export default function Home() {
               className="w-full h-[60px] rounded-[22px] bg-violet-600 hover:bg-violet-500 transition text-xl font-black mt-8"
             >
               {wallet ? 'Start Swap' : 'Connect Wallet'}
+         {/* OPEN POSITIONS */}
+
+<div className="mt-8 border border-white/10 rounded-[24px] bg-black p-5">
+
+  <div className="flex items-center justify-between mb-5">
+
+    <h3 className="text-xl font-black">
+      Open Positions
+    </h3>
+
+    <span className="text-green-400 text-sm">
+      Live
+    </span>
+
+  </div>
+
+  <div className="space-y-4">
+
+    {/* POSITION 1 */}
+    <div className="border border-white/10 rounded-2xl p-4 bg-[#090909]">
+
+      <div className="flex justify-between mb-2">
+
+        <span className="font-bold text-green-400">
+          BUY USDX
+        </span>
+
+        <span className="text-green-400 font-bold">
+          +12.45%
+        </span>
+
+      </div>
+
+      <div className="flex justify-between text-sm text-gray-400">
+
+        <span>
+          Entry: 0.0084
+        </span>
+
+        <span>
+          Size: 250 USD
+        </span>
+
+      </div>
+
+    </div>
+
+    {/* POSITION 2 */}
+    <div className="border border-white/10 rounded-2xl p-4 bg-[#090909]">
+
+      <div className="flex justify-between mb-2">
+
+        <span className="font-bold text-red-400">
+          SELL BNB
+        </span>
+
+        <span className="text-red-400 font-bold">
+          -2.14%
+        </span>
+
+      </div>
+
+      <div className="flex justify-between text-sm text-gray-400">
+
+        <span>
+          Entry: 602
+        </span>
+
+        <span>
+          Size: 120 USD
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
             </button>
 
           </div>
