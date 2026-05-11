@@ -392,14 +392,50 @@ export default function Home() {
 
         {/* FEATURES */}
         <section className="grid md:grid-cols-5 gap-5 mt-8">
+          {/* ROADMAP SECTION */}
 
-        [
+<section id="roadmap" className="mt-24">
+
+  <h2 className="text-5xl font-black mb-10">
+    Roadmap
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-6">
+
+    {[
+      ['Phase 1', 'Launch Website & Token'],
+      ['Phase 2', 'DEX Listing & Marketing'],
+      ['Phase 3', 'Exchange Launch & Staking']
+    ].map(([phase, text]) => (
+
+      <div
+        key={phase}
+        className="border border-white/10 rounded-[30px] bg-[#090909] p-8"
+      >
+
+        <h3 className="text-3xl font-black mb-4 text-violet-400">
+          {phase}
+        </h3>
+
+        <p className="text-gray-400 text-lg">
+          {text}
+        </p>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
+
+         {[
   ['Roadmap', '#roadmap'],
   ['Tokenomics', '#tokenomics'],
   ['Governance', '#governance'],
   ['Community', '#community'],
   ['Whitepaper', '#whitepaper']
-]
+].map(([title, link]) => 
 
             <a
               key={title}
