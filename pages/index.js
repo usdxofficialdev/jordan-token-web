@@ -435,7 +435,7 @@ export default function Home() {
   ['Governance', '#governance'],
   ['Community', '#community'],
   ['Whitepaper', '#whitepaper']
-].map(([title, link]) => 
+  ].map(([title, link]) => (
 
             <a
               key={title}
