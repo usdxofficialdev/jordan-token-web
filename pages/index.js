@@ -184,6 +184,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
 
   <span className="text-green-400 font-black text-sm">
+        
     +12.45%
   </span>
 
