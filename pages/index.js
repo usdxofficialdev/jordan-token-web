@@ -200,12 +200,12 @@ export default function Home() {
           </div>
 
           {/* SWAP */}
-          <div className="border border-white/10 rounded-[35px] bg-[#090909] p-6 sticky top-[95px]">
+          <div className="border border-cyan-500/10 rounded-[22px] bg-[#050816]/95 backdrop-blur-xl p-4 max-w-[420px] mx-auto shadow-[0_0_40px_rgba(34,211,238,0.08)] sticky top-[95px]">
 
             <div className="flex justify-between items-center mb-8">
 
-              <h2 className="text-3xl font-black">
-                Swap
+              <h2 className="text-lg font-black tracking-[2px] text-cyan-400">
+                TRADE
               </h2>
 
               <button>
@@ -216,9 +216,9 @@ export default function Home() {
 
 
             {/* FROM */}
-            <div className="bg-black border border-white/10 rounded-[24px] p-5">
+            <div className="bg-black border border-white/10 rounded-[16px] p-4">
 
-              <div className="flex justify-between text-sm text-gray-500 mb-4">
+              <div className="flex justify-between text-[11px] text-cyan-400/70 uppercase tracking-[2px] mb-3 font-bold">
 
                 <span>From</span>
 
@@ -228,20 +228,20 @@ export default function Home() {
 
               </div>
 
-              <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center justify-between gap-3">
 
                 <input
                   type="number"
                   value={fromAmount}
                   onChange={(e) => setFromAmount(e.target.value)}
                   placeholder="0.0"
-                  className="bg-transparent outline-none text-5xl font-black w-full"
+                  className="bg-transparent outline-none text-3xl font-black tracking-tight w-full"
                 />
 
                 <select
                   value={fromToken}
                   onChange={(e) => setFromToken(e.target.value)}
-                  className="bg-[#141414] border border-white/10 rounded-2xl px-4 py-3 outline-none"
+                  className="bg-[#0f172a] border border-cyan-500/10 rounded-[14px] px-3 py-2 min-w-[95px]  outline-none text-sm font-bold"
                 >
                   <option>BNB</option>
                   <option>USDT</option>
@@ -257,7 +257,7 @@ export default function Home() {
 
               <button
                 onClick={switchTokens}
-                className="w-14 h-14 rounded-full bg-violet-700 border-[6px] border-black text-2xl"
+                className="w-10 h-10 rounded-full bg-cyan-500/20 border border-cyan-400/20 text-lg backdrop-blur-md hover:scale-105 transition"
               >
                 ⇅
               </button>
@@ -265,9 +265,9 @@ export default function Home() {
             </div>
 
             {/* TO */}
-            <div className="bg-black border border-white/10 rounded-[24px] p-5">
+            <div className="bg-black border border-white/10 rounded-[16px] p-4">
 
-              <div className="flex justify-between text-sm text-gray-500 mb-4">
+              <div className="flex justify-between text-[11px] text-cyan-400/70 uppercase tracking-[2px] mb-3 font-bold">
 
                 <span>To</span>
 
@@ -275,20 +275,20 @@ export default function Home() {
 
               </div>
 
-              <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center justify-between gap-3">
 
                 <input
                   type="number"
                   value={toAmount}
                   onChange={(e) => setToAmount(e.target.value)}
                   placeholder="0.0"
-                  className="bg-transparent outline-none text-5xl font-black w-full"
+                  className="bg-transparent outline-none text-3xl font-black tracking-tight w-full"
                 />
 
                 <select
                   value={toToken}
                   onChange={(e) => setToToken(e.target.value)}
-                  className="bg-[#141414] border border-white/10 rounded-2xl px-4 py-3 outline-none"
+                  className="bg-[#0f172a] border border-cyan-500/10 rounded-[14px] px-3 py-2 min-w-[95px]  outline-none text-sm font-bold"
                 >
                   <option>USDX</option>
                   <option>USDT</option>
@@ -302,20 +302,20 @@ export default function Home() {
 
             <button
               onClick={openWallet}
-              className="w-full h-[52px] rounded-[16px] bg-violet-600 hover:bg-violet-500 transition text-xl font-black mt-4"
+              className="w-full h-[52px] rounded-[16px] bg-cyan-500 text-black hover:bg-cyan-400 transition text-sm font-black tracking-[2px] mt-4 shadow-[0_0_20px_rgba(34,211,238,0.25)]"
             >
-              {wallet ? 'Start Swap' : 'Connect Wallet'}
+              {wallet ? 'Start TRADE' : 'Connect Wallet'}
 
             </button>
 
          {/* OPEN POSITIONS */}
 
-<div className="mt-4 border border-white/10 rounded-[24px] bg-black p-5">
+<div className="mt-4 border border-white/10 rounded-[18px] bg-[#050816] p-5">
 
   <div className="flex items-center justify-between mb-5">
 
-    <h3 className="text-xl font-black">
-      Open Positions
+    <h3 className="text-sm font-black tracking-[2px] text-cyan-400">
+      OPEN POSITIONS
     </h3>
 
     <span className="text-green-400 text-sm">
@@ -327,21 +327,21 @@ export default function Home() {
   <div className="space-y-4">
 
     {/* POSITION 1 */}
-    <div className="border border-white/10 rounded-2xl p-4 bg-[#090909]">
+    <div className="border border-white/10 rounded-[14px] p-3 bg-[#0b1120] border border-cyan-500/10">
 
       <div className="flex justify-between mb-2">
 
-        <span className="font-bold text-green-400">
+        <span className="text-xs font-black tracking-wide text-green-400">
           BUY USDX
         </span>
 
-        <span className="text-green-400 font-bold">
+        <span className="text-green-400 text-sm font-black">
           +12.45%
         </span>
 
       </div>
 
-      <div className="flex justify-between text-sm text-gray-400">
+      <div className="flex justify-between text-[11px] text-gray-500 tracking-wide">
 
         <span>
           Entry: 0.0084
@@ -356,21 +356,21 @@ export default function Home() {
     </div>
 
     {/* POSITION 2 */}
-    <div className="border border-white/10 rounded-2xl p-4 bg-[#090909]">
+    <div className="border border-white/10 rounded-[14px] p-3 bg-[#0b1120] border border-cyan-500/10">
 
       <div className="flex justify-between mb-2">
 
-        <span className="font-bold text-red-400">
+        <span className="text-xs font-black tracking-wide text-red-400">
           SELL BNB
         </span>
 
-        <span className="text-red-400 font-bold">
+        <span className="text-red-400 text-sm font-black">
           -2.14%
         </span>
 
       </div>
 
-      <div className="flex justify-between text-sm text-gray-400">
+      <div className="flex justify-between text-[11px] text-gray-500 tracking-wide">
 
         <span>
           Entry: 602
