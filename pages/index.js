@@ -402,9 +402,85 @@ export default function Home() {
 </div>
 
 
+      </div>
+
+  {/* LIVE TRADES */}
+
+  <div className="mt-4 border border-cyan-500/10 rounded-[18px] bg-[#08111f] overflow-hidden">
+
+    <div className="flex items-center justify-between px-4 py-3 border-b border-cyan-500/10">
+
+      <span className="text-cyan-400 text-xs font-black tracking-[2px]">
+        LIVE TRADES
+      </span>
+
+      <span className="text-[10px] text-green-400">
+        Updating
+      </span>
+
+    </div>
+
+    <div className="max-h-[220px] overflow-y-auto">
+
+      <div className="flex justify-between px-4 py-3 text-xs border-b border-white/5">
+
+        <span className="text-green-400 font-bold">
+          BUY
+        </span>
+
+        <span>
+          4,240 USDX
+        </span>
+
+        <span className="text-gray-400">
+          $428
+        </span>
+
+      </div>
+
+      <div className="flex justify-between px-4 py-3 text-xs border-b border-white/5">
+
+        <span className="text-red-400 font-bold">
+          SELL
+        </span>
+
+        <span>
+          1,820 USDX
+        </span>
+
+        <span className="text-gray-400">
+          $190
+        </span>
+
+      </div>
+
+      <div className="flex justify-between px-4 py-3 text-xs border-b border-white/5">
+
+        <span className="text-green-400 font-bold">
+          BUY
+        </span>
+
+        <span>
+          8,920 USDX
+        </span>
+
+        <span className="text-gray-400">
+          $812
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
           </div>
 
         </section>
+
 
         {/* FEATURES */}
         <section className="grid md:grid-cols-5 gap-5 mt-4">
